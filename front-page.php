@@ -103,9 +103,11 @@
                     <?php endwhile; ?>
                     <?php endif; ?>
                     
+    
+    <div class="trending">
                                 <h1 class="moreblogs">Meer blogs lezen?</h1>
-                             <a id="readmorebutton1" class="readmore4" href="<?php the_permalink($id); ?>">Lees meer</a></div>
-
+                             <a id="readmorebutton1" class="readmore4" href="<?php the_permalink($id); ?>">Lees meer</a>
+</div>
     
 <?php get_footer(); ?>
 
