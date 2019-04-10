@@ -129,7 +129,7 @@ h6 {
     font-family: 'Conv_03-streetlight-demo-version';
     color: #567B69; 
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 25px;
     line-height: 1.5em;
     margin-bottom: 0;
 }
@@ -292,17 +292,30 @@ li {
 }
 
 .widget img {
+  position: absolute;
   width: 250px;
   height: 180px;
   float: left;
+  z-index: 100;
+  overflow: hidden;
     
 }
 
+.widget img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.widget:hover img {
+  transform: scale(1.5);
+}
+
 p.widget-text {
+    position: absolute;
     width: 200px;
     padding-left: 25px;
     padding-right: 25px;
-    margin-top: -15px;
+    margin-top: -23px;
     height: 125px;
     background-color: #fff;
     box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
@@ -313,14 +326,27 @@ p.widget-text {
     line-height: 1.em;
     margin-bottom: 0em;
     color:  rgba(0,0,0,0.7);
+    z-index: 3;
 }
 
 .widget-title {
-  font-size: 24px;
+  position: relative;
+  font-size: 54px;
   color: rgba(0,0,0,0.7);
   background-color: #fff;
-  padding: 198px 25px 23px 25px;
+  padding: 188px 25px 23px 25px;
+  z-index: 2;
   
+}
+.widget-title:before  {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 3px;
+    bottom: 42px;
+    left: 25px;
+    border-bottom: 4px solid #567B69; 
+    z-index: 3;
 }
 
 .widgetfront1 {
@@ -553,7 +579,7 @@ p.widget-text {
     height: 600px;
     margin-top: 130px;
     margin-bottom: 50px;
-   /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(86,123,105,1)); 
+   /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(86,123,105,1)); */
     
 }
 .moreblogs {
