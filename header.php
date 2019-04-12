@@ -7,6 +7,9 @@
 <html lang="en">
 
 <head>
+      <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
@@ -55,7 +58,7 @@ j$(function(){
 <script>
    $(function() {
        $(window).scroll(function () {
-           if ($(window).scrollTop() > 50) {
+           if ($(window).scrollTop() > 5) {
                $('.header').addClass('smaller');
                $('.main-navigation').addClass('navifixed');
                
@@ -67,11 +70,38 @@ j$(function(){
            }
        });
    });
+    
+    
 
        
-       
+    </script>
+    
+    <script>   
+jQuery(document).ready(function($) {
+  $(".search_icon").click(function() {
+    $(".spicewpsearchform").slideToggle();
+  });
+
+  $(document).keydown(function(e) {
+    if (e.keyCode == 27) {
+      //$(modal_or_menu_element).closeElement();
+      $(".spicewpsearchform").hide();
+    }
+  });
+});
        
     </script>
+    
+    <script>
+//TOGGLE FONT AWESOME ON CLICK
+$('.search_icon').click(function(){
+    $(this).find('i').toggleClass('fas-fa-times ')
+});
+$('.search_icon').blur(function(){
+    $(this).find('i').toggleClass('fa-plus-square-o fa-2x fa-minus-square-o fa-2x')
+});
+        
+</script>
     
     <meta charset="UTF-8">
     <link href="<?php bloginfo('template_url') ?>/style.css" type="text/css" rel=stylesheet>
