@@ -10,7 +10,8 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
-    jQuery( document ).ready(function() {
+
+   $( document ).ready(function() {
 var j$ = jQuery,
     $nav = j$(".main-navigation"),
     $slideLine = j$("#slide-line"),
@@ -49,11 +50,27 @@ j$(function(){
     }
    );
 });
+       });
+    </script>
+<script>
+   $(function() {
+       $(window).scroll(function () {
+           if ($(window).scrollTop() > 50) {
+               $('.header').addClass('smaller');
+               $('.main-navigation').addClass('navifixed');
+               
+           }
+           
+           else {
+               $('.header').removeClass('smaller');
+               $('.main-navigation').removeClass('navifixed');
+           }
+       });
+   });
 
-
-        
-    });
-    
+       
+       
+       
     </script>
     
     <meta charset="UTF-8">
