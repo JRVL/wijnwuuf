@@ -220,17 +220,71 @@ li {
         color:#567B69;
       }
 
+
   
   /** Sliding Underline **/
 #slide-line {
   position: absolute;
   display: inline-block;
   bottom: -10px;
+  padding-left: 35px;
+  margin-left: 19px;
   height: 5px;
   background-color: #567b69;
   transition: all .3s ease;
 }
 
+
+.spicewpsearchform{
+    display: block;
+    width: 500px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: 1px;
+    z-index: 9999;
+    background: #fff;
+    padding: 20px;
+    border: 5px solid #d05353;
+}
+#spicewpsearchform input[type="text"] {
+    width: 78%;
+    height: auto;
+    border: 1px solid #5ca2df;
+    padding: 11px 12px;
+    border-radius: 0px !important; 
+    }
+#spicewpsearchform input[type="submit"] {
+    line-height: 1;
+    padding: 14px 20px;
+    border-radius: 0px;
+    height: auto;
+    font-size: 15px;
+    display: inline-block;
+    border: 1px solid #5ca2df;
+}
+#spicewpsearchform:before {
+    border-color: transparent transparent #d05353;
+    border-style: solid;
+    border-width: 0.5em;
+    content: "";
+    display: block;
+    position: absolute;
+    right: 22px;
+    top: -20px;
+    z-index: 10;
+}
+
+/**Css for image search icon**/
+.spicewpsearch_icon {
+   background-image: url('images/search-icon.png');
+   background-repeat: no-repeat;
+   padding: 0 0 0 36px;
+   background-position: 5px center;
+   background-color: transparent;
+   background-size: 18px 18px;
+       
+}
 
 /**
  * Footer Styles
@@ -291,8 +345,8 @@ li {
     float:left;
 }
 
-.widget img {
-  position: absolute;
+.widget-image {
+  position: relative;
   width: 250px;
   height: 180px;
   float: left;
@@ -301,14 +355,23 @@ li {
     
 }
 
-.widget img {
+.img-hover-zoom img {
+  position: absolute;
+  float: left;
+  width: 250px;
+  height: 180px;
+  overflow: hidden;
+    z-index: 100;/* Removing this will break the effects */
+}
+
+/*.widget img {
   transition: transform .5s ease;
 }
 
-/* [3] Finally, transforming the image when container gets hovered */
+ [3] Finally, transforming the image when container gets hovered 
 .widget:hover img {
   transform: scale(1.5);
-}
+} */
 
 p.widget-text {
     position: absolute;
@@ -353,7 +416,7 @@ p.widget-text {
   position: relative;
   width: 250px;
   margin-left: 50px;
-  margin-right: 25px;
+  margin-right: 5px;
   margin-top: 40px;
   box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
 }
@@ -362,6 +425,19 @@ p.widget-text {
   display: block;
   width: 100%;
   height: auto;
+  overflow: hidden;
+}
+
+.img-hover-zoom--colorize img {
+position: absolute;
+  transition: transform 0.5s, filter 0.3s ease-in-out;
+  filter: grayscale(100%);
+}
+
+/* The Transformation */
+.img-hover-zoom--colorize:hover img {
+  filter: grayscale(0);
+    overflow: hidden;
 }
 
 

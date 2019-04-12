@@ -8,8 +8,9 @@
 
 <head>
     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    jQuery( document ).ready(function() {
 var j$ = jQuery,
     $nav = j$(".main-navigation"),
     $slideLine = j$("#slide-line"),
@@ -25,7 +26,7 @@ j$(function(){
   }
   
   // Underline transition
-  j$($nav).find(".current-menu-item a").hover(
+  j$($nav).find("li").hover(
     // Hover on
     function(){
       $slideLine.css({
@@ -51,7 +52,7 @@ j$(function(){
 
 
         
-        
+    });
     
     </script>
     

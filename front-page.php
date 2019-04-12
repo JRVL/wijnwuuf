@@ -107,6 +107,52 @@
     <div class="trending">
                                 <h1 class="moreblogs">Meer blogs lezen?</h1>
                              <a id="readmorebutton1" class="readmore4" href="<?php the_permalink($id); ?>">Lees meer</a>
+        
+        <div class="trendingpost1"><a href="http://localhost:8080/wordpress/?p=19">
+	<div class="img-hover-zoom img-hover-zoom--colorize">
+<img src="http://localhost:8080/wordpress/wp-content/uploads/2019/04/38627282_259275958240745_6514459077194547200_n1.jpg"  alt="This zooms-in really well and smooth">
+</div>
+	<h6 class="widget-title">
+		Over mij</h6>
+<p class="widget-text">Hi! ik ben Amber, het wijnwuuf. Gek op alles wat met wijn heeft te maken. Meer over mij weten? 
+</p></a></div>
+        
+   <div id="slider-food"> 
+<?php 
+$carousel_cat = get_theme_mod('carousel_setting','1'); 
+$carousel_count = get_theme_mod('count_setting','4'); 
+$month = date('m'); 
+$year = date('Y'); 
+$new_query = new WP_Query( array('posts_per_page' => $carousel_count, 'meta_key' => 'wpb_post_views_count', 'orderby' => 'meta_value_num', 'order' => 'DESC','monthnum'=>$month,'year'=>$year )); 
+?> 
+<?php if ( $new_query->have_posts() ) : ?> 
+<?php while ( $new_query->have_posts() ) : $new_query->the_post(); ?> 
+<div class="item"> 
+    <?php the_post_thumbnail('popular-posts'); ?>
+    <h2><a class="popular-category" 
+        <?php 
+        $categories = get_the_category(); 
+        $separator = ", ";
+        $output = '';
+
+        if ($categories) {
+            foreach ($categories as $category) {
+                $output .= '<a href="' . get_category_link($category->term_id) . '">' . $category->cat_name . '</a>' . $separator;
+            }
+            echo trim($output, $separator);
+        }
+
+        ?></a></h2>
+ <p>
+     <a class="popular-excerpt" href="<?php the_permalink(); ?>"><?php echo get_the_excerpt(); ?></a>
+                </p>
+</div> 
+<?php endwhile; wp_reset_postdata(); ?> 
+<?php else : ?> 
+<p><?php _e( 'Sorry, No Popular Posts Found ' ); ?></p> 
+<?php endif; ?> 
+</div>
+        
 </div>
     
 <?php get_footer(); ?>

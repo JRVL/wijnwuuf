@@ -24,6 +24,18 @@ function register_wijnwuuf_menus() {
 }
 add_action('init','register_wijnwuuf_menus');
 
+add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
+
+// Display fontawesome search icon in menus and toggle search form 
+
+function add_search_form($items, $args) {
+if( $args->theme_location == 'primary' )
+       $items .= '<li class="search"><a class="search_icon"><i class="fa fa-search"></i></a><div style="display:none;" class="spicewpsearchform">'. get_search_form(false) .'</div></li>';
+       return $items;
+}
+
+
+
 /* --- Add Stylesheets --- */
 
 // Enqueue Main Stylesheet
