@@ -71,16 +71,15 @@ template {
  * Typography
  */
 
-@font-face {
-font-family: "FontAwesome";
-font-weight: normal;
-font-style : normal;
-       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0");
-       src : url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"),
-             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"),
-             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"),
-             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"),
-             url("https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+@font-face { 
+  font-family: "icons"; 
+  src: url("fonts/icons.eot"); 
+  src: url("fonts/icons.eot?#iefix") format("embedded-opentype"), 
+  	url("fonts/icons.woff") format("woff"), 
+  	url("fonts/icons.ttf") format("truetype"), 
+  	url("fonts/icons.svg#icons") format("svg"); 
+  font-weight: normal; 
+  font-style: normal;
 }
 
 @font-face {
@@ -96,7 +95,7 @@ h1 {
     font-family: 'Abhaya Libre', sans-serif;
     text-decoration: none;
     font-weight: 500;
-    font-size: 2.35em;
+    font-size: 2.35rem;
     line-height: 1.0909090909090908em;
     margin-top: 0.8181818181818181em;
     margin-bottom: 0.27272727272727em;
@@ -133,8 +132,8 @@ h5 {
     text-decoration: none;
     font-weight: 400;
     font-size: 1em;
-    line-height: 1.5em;
-    margin-bottom: 0em;
+    margin-top: -11px;
+    margin-bottom: 1.5em;
 }
 
 h6 {
@@ -153,17 +152,6 @@ a:-webkit-any-link {
 
 a:visited {
    color: -webkit-link;
-}
-
-
-/**
- * Global Styles
-*/
-
-.main-content-width-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2em;
 }
 
 
@@ -275,15 +263,24 @@ li {
 }
 
 .search input[type="text"] {
-    padding: 10px 72px;
+    padding: 10px 87px 10px 13px;
     background: #f4f4f4;
     text-align: left;
     border: 0px;
     float: left;
+    box-shadow: 0 0 12px rgba(#000,0.26);
 }
 
 .search input {
-    
+    padding: 0 10px 0 29px;
+}
+
+.fas {
+    float: left;
+    padding-left: 5px;
+    padding-top: 10px;
+    color: #c4c4c4;
+    z-index: 9999;
 }
 
 input {
@@ -293,7 +290,7 @@ input {
 .search_icon:before {
   content: "/f002";
   display: inline-block;
-  font-family: 'FontAwesome';
+  font-family: "Font Awesome 5 Free";
   position: absolute;
 }
 
@@ -319,12 +316,13 @@ input {
     }
 #spicewpsearchform input[value="submit"] {
     line-height: 1;
-    padding: 14px 40px;
+    padding: 14px 80px;
     border-radius: 0px;
     height: auto;
     font-size: 15px;
     display: inline-block;
     border: 1px solid #f4f4f4;
+    box-shadow: 0 0 12px rgba(#000,0.26);
 }
 #spicewpsearchform:before {
     border-color: transparent transparent;
@@ -351,6 +349,28 @@ input {
        
 }
 
+
+
+/* -- Index-Page -- */
+
+
+.main-content-width-wrapper {
+    width: 70%;
+    margin: 15%;
+    line-height: 26px;
+    
+}
+
+.two-column-entry {
+    background: #f4f4f4;
+    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.4);
+    border: 0px solid #c4c4c4;
+    padding: 30px 50px 50px 50px; 
+}
+
+.title-index {
+    max-width: 80%;
+}
 /**
  * Footer Styles
 */

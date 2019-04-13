@@ -7,9 +7,7 @@
 <html lang="en">
 
 <head>
-      <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
-  <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
-  <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+      <script defer src="/your-path-to-fontawesome/js/all.js"></script>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
@@ -95,7 +93,7 @@ jQuery(document).ready(function($) {
     <script>
 //TOGGLE FONT AWESOME ON CLICK
 $('.search_icon').click(function(){
-    $(this).find('i').toggleClass('fas-fa-times ')
+    $(this).find('i').toggleClass('fa ')
 });
 $('.search_icon').blur(function(){
     $(this).find('i').toggleClass('fa-plus-square-o fa-2x fa-minus-square-o fa-2x')
@@ -111,10 +109,8 @@ $('.search_icon').blur(function(){
 <body>
    
     
-  
-    
     <header class="header">
-        <a href="index.php"><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logo"></a>
+        <a href="#"><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logo"></a>
         <div class="main-navigation">
             <?php 
                     wp_nav_menu( $arg = array (
