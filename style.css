@@ -16,6 +16,8 @@ Description: Template voor mijn Wijnwuuf
  purple -- #9d4eb6
  green -- #5da87b
  grey -- #a5a5a5
+
+rgba(86,123,105,0.2)
 */
 
 /**
@@ -30,6 +32,7 @@ html {
 
 body {
     margin: 0;
+    
 }
 
 article,
@@ -64,6 +67,7 @@ audio:not([controls]) {
 template {
     display: none;
 }
+
 
 
 
@@ -355,63 +359,202 @@ input {
 
 
 .main-content-width-wrapper {
-    width: 70%;
-    margin: 15%;
-    line-height: 26px;
-    
+    width: 100%;
 }
+    
 
 .two-column-entry {
     background: #f4f4f4;
-    box-shadow: 0 0 4rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 2.3rem rgba(0, 0, 0, 0.4);
     border: 0px solid #c4c4c4;
-    padding: 30px 50px 50px 50px; 
+    padding-left: 35px;
+	float: left;
+    margin-top: 150px;
+    margin-left: 4%;
+    width: 63%;
 }
 
 .title-index {
     max-width: 80%;
 }
+
+.widgetfront-right {
+    float: left;
+    padding-top: 24px;
+    
+}
+
+.widgetfront-right .widget {
+margin-bottom: 50px;
+
+}
+    
+}
+
 /**
  * Footer Styles
 */
 
 .footer {
-    padding: 1em 0 3em 0;
-    background: #e0e5db;
-    clear: both;
+    box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+    background: #000;
 }
 
 .footer-navigation {
-    max-width: 58.2% ;
-    margin: 0 auto;
+    max-width: 70% ;
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.4em;
 }
 
 .footer-navigation li {
+    display: list-item;
     list-style-type: none;
-    float: left;
-    margin-right: 1.5em;
+    margin-left: -40px;
 }
 
 .footer-navigation a {
-    color: #00b8b8;
+    color: #000;
+    font-size: 15px;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: .1em;
     display: block;
-    padding: 0 1em;
     transition: .5s all;
 }
 
 .footer-navigation a:hover {
-    color: #01d8d8;
+    color: #567B69;
 }
 
-.copyright {
-    max-width: 960px;
-    margin: 4em auto;
-    clear: left;
+
+
+
+.row {
+    
+    width: 100%;
     text-align: center;
 }
+
+/* Create three equal columns that floats next to each other */
+.column1 {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  margin-left: 9%;
+  width: 25%;
+  height: 280px; /* Should be removed. Only for demonstration */
+}
+
+.content-column1 {
+     padding: 0 0 0 100px;
+     text-align: left;
+     font-size: 15px;
+     line-height: 1.4em; 
+}
+
+.mailto a[href^="mailto:"]
+{ 
+  color: black;
+
+}
+
+.footerimage {
+    background-image: linear-gradient(to top, rgba(86,123,105,0.6), rgba(86,123,105,0.2));
+    
+}
+
+.column2 {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left; margin:auto;
+  width: 25%;
+  height: 280px; /* Should be removed. Only for demonstration */
+}
+
+.column3 {
+  display: inline-block;
+  box-sizing: border-box;
+  float: left;
+  width: 25%;
+  height: 280px; /* Should be removed. Only for demonstration */
+}
+
+
+
+/** Icon styles
+*
+* There are styles for icon and everything which are connected with it.
+*/
+.icon {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 0%;
+  font-size: 25px;
+  color: #fff;
+  line-height: 52px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+
+
+.icon:after {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    content: '';
+    box-sizing: content-box;
+  }
+
+
+
+.icon-effect .icon:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    opacity: 0;
+}
+
+.icon-effect-1a .icon:hover {
+    top: -5px;
+    background-color: #fff;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4);
+    color: #567B69;
+}
+
+.icon-effect-1a .icon:hover:after {
+    opacity: 1;
+}
+
+.title-social1 {
+    display: inline-block;
+    font-size: 50px;
+    margin-top: 40px;
+    color: #f4f4f4;
+}
+
+.title-social2 {
+    position: relative;
+    font-family: 'Conv_03-streetlight-demo-version';
+    font-weight: 300;
+    font-size: 40px;
+    margin-left: 100px;
+    margin-top: -36px;
+    color: rgba(0,0,0,0.7);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 
 /** 
 *  Sidebar 
@@ -419,15 +562,39 @@ input {
 
 .widgetfront {
     width: 100%;
-    height: 600px;
+    height: 620px;
     margin-top: 270px;
     margin-bottom: 50px;
-    background-image: linear-gradient(to top, rgba(255,0,0,0), rgba(86,123,105,1));
+   /* background: rgba(86,123,105,0.4);*/
+    background-image: linear-gradient(to top, rgba(86,123,105,0.2), rgba(86,123,105,0.6));
     
 }
 
+.title-big {
+    display: inline-block;
+    font-size: 95px;
+    margin-top: 40px;
+    margin-left: 140px;
+    color: #f4f4f4;
+}
+
+.title-under {
+    position: relative;
+    font-family: 'Conv_03-streetlight-demo-version';
+    font-weight: 300;
+    font-size: 50px;
+    margin-left: 340px;
+    margin-top: -80px;
+    color: rgba(0,0,0,0.7);
+}
+
 .textwidget {
-    float:left;
+    display: table;
+    margin: auto;
+    float: left;
+    margin-top: -140px;
+    margin-left: 10%;
+    margin-right: -9%
 }
 
 .widget-image {
@@ -502,7 +669,7 @@ p.widget-text {
   width: 250px;
   margin-left: 50px;
   margin-right: 5px;
-  margin-top: 40px;
+  margin-top: 170px;
   box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
 }
 
@@ -556,7 +723,7 @@ position: absolute;
 .thumbnailfront1 img {
     position: relative;
     float: right;
-    margin-right: 60px;
+    margin-right: 90px;
     z-index: 3;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.6);
 }
@@ -570,9 +737,9 @@ position: absolute;
 }
 
 .posttitle1  {
-    width: 380px;
+    width: 400px;
     padding-left: 80px;
-    padding-top: 60px;
+    padding-top: 30px;
 }
 
 .categorie1 {
@@ -604,6 +771,7 @@ position: absolute;
     height: auto;
     z-index: 1;  
     margin-top: 100px;
+    margin-bottom: calc(10% + 50px);
 }
     
 .thumbnailfront2 img {
@@ -623,14 +791,14 @@ position: absolute;
 }
 
 .posttitle2  {
-    font-size: 1.55em;
+    font-size: 1.65em;
     width: 340px;
     padding-left: 17%;
     padding-top: 20px;
 }
 
 .content2 {
-    font-size: 0.85em;
+    font-size: 0.95em;
     width: 340px;
     padding-left: 17%;
 }
@@ -648,7 +816,8 @@ position: absolute;
     width: 100%;
     height: auto;
     z-index: 1;  
-    margin-top: 80px;
+    margin-top: 0px;
+    
 }
     
 .thumbnailfront3 img {
@@ -657,6 +826,7 @@ position: absolute;
     margin-left: 17%;
     z-index: 3;
     box-shadow: 0 0 5rem rgba(0, 0, 0, 0.6);
+    
 }
 
 .thumbnailfront3 img {
@@ -669,19 +839,20 @@ position: absolute;
 
 
 .posttitle3  {
-    font-size: 1.55em;
+    font-size: 1.65em;
     width: 335px;
     padding-top: 20px;
     padding-left: 730px;
 }
 
 .content3 {
-    font-size: 0.85em;
+    font-size: 0.95em;
     width: 335px;
     padding-left: 730px;
 }
 
 .readmore3 {
+    margin-left: 730px;
     background-color: #567B69;
     
 }
@@ -695,7 +866,7 @@ position: absolute;
     width: 100%;
     height: auto;
     z-index: 1;  
-    margin-top: 180px;
+    margin-bottom: ;
 }
     
 .thumbnailfront4 img {
@@ -715,14 +886,14 @@ position: absolute;
 }
 
 .posttitle4  {
-    font-size: 1.55em;
+    font-size: 1.65em;
     width: 340px;
     padding-left: 17%;
     padding-top: 20px;
 }
 
 .content4 {
-    font-size: 0.85em;
+    font-size: 0.95em;
     width: 340px;
     padding-left: 17%;
 }
@@ -733,22 +904,6 @@ position: absolute;
     
 }
 
-
-/* --- Readmore button --- */
-
-.trending {
-    width: 100%;
-    height: 600px;
-    margin-top: 130px;
-    margin-bottom: 50px;
-   /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(86,123,105,1)); */
-    
-}
-.moreblogs {
-    text-align: center;
-    color: #000;
-    margin-top: 80px;
-}
 
 
 

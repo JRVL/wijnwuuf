@@ -7,7 +7,7 @@
 <html lang="en">
 
 <head>
-      <script defer src="/your-path-to-fontawesome/js/all.js"></script>
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>

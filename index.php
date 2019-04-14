@@ -29,7 +29,7 @@
                 </main>
     </div>
     
-    <div class="widgetfront"><?php dynamic_sidebar('sidebar'); ?></div>
+    <div class="widgetfront-right"><?php dynamic_sidebar('right'); ?></div>
 
 </div>
 
