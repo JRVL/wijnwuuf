@@ -4,6 +4,8 @@
 get_header();
 ?>
 
+<? php wpb_set_post_views(get_the_ID()); ?>
+
 <div class="single-main">
             <div class="single-title">
                     <h1><?php echo get_the_title(); ?></h1>

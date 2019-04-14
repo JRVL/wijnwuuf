@@ -108,6 +108,15 @@
                     <?php endif; ?>
         
          </div>
+    
+    <div class="trending">
+            <h1 class="title-big-trending">Populair</h1>
+            <div class="title-under-trending">meest gelezen blogs</div>
+        
+     
+        
+      
+    </div>
                     
     
 

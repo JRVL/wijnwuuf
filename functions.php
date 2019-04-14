@@ -86,6 +86,9 @@ add_action( 'widgets_init', 'wijnwuuf_widget_init');
 add_theme_support('post-thumbnails');
 add_image_size('thumbnail-front', 600, 9999, true);
 add_image_size('thumbnail-frontlow', 450, 9999, true);
+add_image_size('small', 500, 9999, true);
+
+
 
     
 add_theme_support('post-formats', array(

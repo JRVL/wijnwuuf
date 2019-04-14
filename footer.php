@@ -6,8 +6,8 @@
 <body>
 
 
-<div class="footerimage">
-<div class="row">
+
+
   <div class="column1">
       
       <h1 class="title-social1">Contact</h1>
@@ -45,9 +45,6 @@
       </ul>
   </div>
    
-    
-
-    </div> </div>
    
 
 </body>

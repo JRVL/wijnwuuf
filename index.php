@@ -16,7 +16,7 @@
                             while (have_posts()):
                                     the_post();
                     if ( has_post_thumbnail() ) {
-	                           the_post_thumbnail('medium_large');
+	                           the_post_thumbnail('small');
                                 } 
                                         the_content();
                             endwhile;
