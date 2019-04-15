@@ -7,6 +7,7 @@
 
 <body>
     
+   
     <div class="home">
         
        
@@ -40,6 +41,31 @@
         <div class="widgetfront">
             <h1 class="title-big">Welkom</h1>
             <div class="title-under">op mijn blog</div>
+            <h1 class="title-second">Lees alles over</h1><div id="typewriter"></div>
+ 
+ <script>
+ var app = document.getElementById('typewriter');
+ 
+ var typewriter = new Typewriter(app, {
+     loop: true
+ });
+ 
+ typewriter.typeString('wijn')
+     .pauseFor(300)
+     .deleteAll(100)
+     .typeString('supermarkt reviews')
+     .pauseFor(500)
+     .deleteAll()
+     .typeString('wijn en slijs')
+     .pauseFor(200)
+     .deleteChars(4)
+     .typeString('pijs')
+     .pauseFor(500)
+     .deleteAll()
+     .typeString('een wijnproeverij bij jou thuis')
+     .pauseFor(500)
+     .start();
+ </script>
             
             <?php dynamic_sidebar('sidebar'); ?></div>
 		                  
