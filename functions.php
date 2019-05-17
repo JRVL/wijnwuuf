@@ -26,6 +26,10 @@ add_action('init','register_wijnwuuf_menus');
 
 add_action( 'wp_enqueue_scripts', 'tthq_add_custom_fa_css' );
 
+
+
+
+
 /* -- font awesome -- */
 function tthq_add_custom_fa_css() {
 wp_enqueue_style( 'custom-fa', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css' );
@@ -39,7 +43,7 @@ add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 // Display search icon in menus and toggle search form 
 function add_search_form($items, $args) {
 if( $args->theme_location == 'primary' )
-       $items .= '<li class="search"><a class="search_icon"><span class="spicewpsearch_icon"></span></a><div style="display:none;" class="spicewpsearchform">'. get_search_form(false) .'</div></li>';
+       $items .= '<li class="search"><a class="search_icon"><i class="fas fa-search searchbar"></i></span></a><div style="display:none;" class="spicewpsearchform">'. get_search_form(false) .'</div></li>';
        return $items;
 }
 
@@ -53,6 +57,8 @@ function wijnwuuf_scripts() {
     
 }
 add_action('wijnwuuf_enqueue_scripts','wijnwuuf_scripts');
+
+
 
 /* --- Register Widget Areas --- */
 
@@ -82,20 +88,26 @@ add_action( 'widgets_init', 'wijnwuuf_widget_init');
 
 /* --- Thumbnail sizes --- */
 
-   
-add_theme_support('post-thumbnails');
-add_image_size('thumbnail-front', 600, 9999, true);
-add_image_size('thumbnail-frontlow', 450, 9999, true);
-add_image_size('small', 500, 9999, true);
+/* ADD CUSTOM RESPONSIVE IMAGE SIZES
+================================================== */
+
+ 
+	/**
+	 * Configure the "sizes" attribute of images.
+	 */
+	function wijnwuuf_content_image_sizes_attr($sizes, $size) {
+	    $width = $size[0];
+	    if ($width > 640) {
+	        return '(min-width: 840px) 640px, (min-width: 720px) calc(100vw - 200px), 100vw';
+	    } else {
+	    	return $sizes;
+	    }
+	}
+	add_filter('wp_calculate_image_sizes', 'wijnwuuf_content_image_sizes_attr', 10 , 2);
 
 
-
-    
-add_theme_support('post-formats', array(
-    'single','vast',
-) );  
-     
+ 
 
 
-add_action('init','register_wijnwuuf_menus');
+?>
 

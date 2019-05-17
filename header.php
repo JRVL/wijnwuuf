@@ -8,14 +8,17 @@
 
 <head>
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script>
 
    $( document ).ready(function() {
 var j$ = jQuery,
-    $nav = j$(".main-navigation"),
+    $nav = j$(".header"),
     $slideLine = j$("#slide-line"),
     $currentItem = j$(".current-menu-item");
 
@@ -78,7 +81,7 @@ j$(function(){
     <script>   
 jQuery(document).ready(function($) {
   $(".search_icon").click(function() {
-    $(".spicewpsearchform").slideToggle();
+    $(".spicewpsearchform").toggle();
   });
 
   $(document).keydown(function(e) {
@@ -102,26 +105,40 @@ $('.search_icon').blur(function(){
         
 </script>
     
+
+   
+    
+
+   
+    
     <meta charset="UTF-8">
     <link href="<?php bloginfo('template_url') ?>/style.css" type="text/css" rel=stylesheet>
     <?php wp_head(); ?>
-</head>
-
-<body>
-   
     
     <header class="header">
-        <a href="#"><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logo"></a>
-        <div class="main-navigation">
+        <a href=""><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logo"></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn">
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+            
             <?php 
                     wp_nav_menu( $arg = array (
-                        'menu_class' => 'main-navigation',
+                        
+                        'menu_class' => 'menu',
+                        'container'=>false,
                         'theme_location' => 'primary',
                         'link_before' => '<span>',
-                        'link_after' => '</span>'
+                        'link_after' => '</span>',
+                       
                         
-                    ))
+                    ));
             ?> 
-             <span id="slide-line"></span>     
-        </div>
+            <span id="slide-line"></span>     
+     
     </header>
+    
+  
+</head>
+
+
+   
+    

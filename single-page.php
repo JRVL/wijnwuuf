@@ -4,7 +4,6 @@
 get_header();
 ?>
 
-<? php wpb_set_post_views(get_the_ID()); ?>
 
 <div class="single-main">
             <div class="single-title">
@@ -13,7 +12,7 @@ get_header();
                 <main class="single-content">
                     <?php
                         //start the loop
-                      if (have_post()) :
+                      if (have_posts()) :
                             while (have_posts()):
                                     the_post();
                                         the_content();

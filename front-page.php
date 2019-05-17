@@ -6,7 +6,6 @@
 
 
 <body>
-    
    
     <div class="home">
         
@@ -18,24 +17,41 @@
                     <?php $count++; ?>
                     <?php if ($count == 1) : ?>
 
-                    <div class="item1">
-                        <div class="greenbox1"></div>
+                    
+        <div>
+                 <div class="boxestop">  
                         
-                        <div class="thumbnailfront1" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                            <?php the_post_thumbnail('thumbnail-front');?></div>
+                        <div class="boxtop boxtexttop">
+                         <div data-aos="fade-right" data-aos-duration="1200">
+                                <h1 class="posttitle1"  href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
                         
-                       
-                        
-                                <h1 class="posttitle1" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
-                        
-                        <a class="categorie1"><?php the_category(', '); ?></a>
+                                    <div class="categorie1"><?php the_category(', '); ?></div>
                             
                                     <h4 class="content1" ><?php the_content(''); ?></h4>
                             
-                            
+                                    <div class="button-wrap">
                                     <a id="readmorebutton" class="readmore" href="<?php the_permalink($id); ?>">Lees meer</a></div>
-                        
-                       
+                             </div>
+                                    </div>
+                     
+                      <div class="boxtop boximagetop">
+                        <div data-aos="fade-up" data-aos-duration="1200" >
+                            <?php 
+	                   // Get this attachment ID
+	                       $attachment_id = get_post_thumbnail_id( $post->ID );
+                            $image_large_src = wp_get_attachment_image_src( $attachment_id, 'large' );
+                            ?>
+                <img src="<?php echo $image_large_src[0]; ?>"
+                  srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
+                  sizes="(min-width: 1200px) 638px, (min-width: 992px) 438px, (min-width: 768px) 360px,  (min-width: 320px) 120px"
+                  alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
+                         </div></div>
+                     
+                     
+                                </div>
+                            </div>
+                        </div>
+                       </div>
                 
                         
         <div class="widgetfront">
@@ -67,38 +83,65 @@
      .start();
  </script>
             
-            <?php dynamic_sidebar('sidebar'); ?></div>
+          <?php dynamic_sidebar('sidebar'); ?></div>
+    
 		                  
 
                         
                     <?php elseif ($count == 2) : ?> 
-                    
-                    <div class="item2">
+             
+                        <div class="boxes">
+                            
+                            <div class="box boxtext">
                         
-                        <div class="thumbnailfront2"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                        <?php the_post_thumbnail('thumbnail-frontlow');?></a></div>
-                
-                
                             <h1 class="posttitle2" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
+                        
+                        <div class="categorie2" ><?php the_category(', '); ?></div>
                             
                             <h4 class="content2" ><?php the_content(''); ?></h4>
-                               
-                            
                             
                             <a id="readmorebutton1" class="readmore1" href="<?php the_permalink($id); ?>">Lees meer</a></div>
+                            
+                            <div class="box boximage">
+                             <div data-aos="fade-left" data-aos-duration="1200">
+                               <?php 
+	                   // Get this attachment ID
+	                       $attachment_id = get_post_thumbnail_id( $post->ID );
+	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
+                ?>
+                <img src="<?php echo $image_large_src[0]; ?>"
+                  srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
+                  sizes="(min-width: 840px) 450px, (min-width: 720px) calc(50vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
+                            
+                            
+                            </div>
                        
-                        
+                        </div></div>
                     
                     
                     <?php elseif ($count == 3) : ?>   
                     
-                  <div class="item3">
-                        
-                        <div class="thumbnailfront3"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                        <?php the_post_thumbnail('thumbnail-frontlow');?></a></div>
-                
-                
+       
+            
+                <div class="boxes-middle">
+                    
+                        <div class="box boximage-middle">
+                        <div data-aos="fade-right" data-aos-duration="1200">   <?php 
+	                   // Get this attachment ID
+	                       $attachment_id = get_post_thumbnail_id( $post->ID );
+	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
+                ?>
+                <img src="<?php echo $image_large_src[0]; ?>"
+                  srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
+                  sizes="(min-width: 840px) 450px, (min-width: 720px) calc(50vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
+                            </div></div>
+                    
+                <div class="box boxtext-middle">
                             <h1 class="posttitle3" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
+                      
+                      <div class="categorie3" ><?php the_category(', '); ?></div>
                             
                             <h4 class="content3" ><?php the_content(''); ?></h4>
                                
@@ -106,23 +149,36 @@
                             
                             <a id="readmorebutton1" class="readmore3" href="<?php the_permalink($id); ?>">Lees meer</a></div>
                    
-        
+    </div>
                     
                         <?php elseif ($count == 4) : ?>   
-    
-                   <div class="item4">
-                        
-                        <div class="thumbnailfront4"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                        <?php the_post_thumbnail('thumbnail-frontlow');?></a></div>
                 
+               <div class="boxes">
+                   
+                   
+                   <div class="box boxtext">
                             <h1 class="posttitle4" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
-                            
-                            <h4 class="content4" ><?php the_content(''); ?></h4>
-                               
-                            
-                            
+                       
+                       <div class="categorie4" ><?php the_category(', '); ?></div>                          
+                       <h4 class="content4" ><?php the_content(''); ?></h4>
                             <a id="readmorebutton1" class="readmore4" href="<?php the_permalink($id); ?>">Lees meer</a></div>
                    
+                   
+                        
+                    <div class="box boximage">
+                        <div data-aos="fade-left" data-aos-duration="1200">
+                               <?php 
+	                   // Get this attachment ID
+	                       $attachment_id = get_post_thumbnail_id( $post->ID );
+	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
+                ?>
+                <img src="<?php echo $image_large_src[0]; ?>"
+                  srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
+                  sizes="(min-width: 840px) 450px, (min-width: 720px) calc(50vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
+                
+                           
+                   </div>
                
                             
                     
@@ -133,13 +189,19 @@
                     <?php endwhile; ?>
                     <?php endif; ?>
         
-         </div>
+                   </div></div>
+ 
+    
     
     <div class="trending">
             <h1 class="title-big-trending">Populair</h1>
             <div class="title-under-trending">meest gelezen blogs</div>
         
-     
+    <script>
+  AOS.init({
+    once: true,
+});
+</script>
         
       
     </div>
