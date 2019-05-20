@@ -6,6 +6,11 @@
 
 
 <body>
+    
+
+
+
+    
    
     <div class="home">
         
@@ -197,15 +202,42 @@
             <h1 class="title-big-trending">Populair</h1>
             <div class="title-under-trending">meest gelezen blogs</div>
         
-    <script>
+        <div class="your-class">
+              <div>your content</div>
+              <div>your content</div>
+              <div>your content</div>
+                <div>your content</div>
+              <div>your content</div>
+              <div>your content</div>
+     </div>
+        
+    
+        
+     <script>
+        $(document).ready(function(){
+  $('.your-class').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+  });
+
+         
+        
+        </script>   
+        
+        
+   
+        
+      
+    </div>
+     
+ <script>
   AOS.init({
     once: true,
 });
 </script>
-        
-      
-    </div>
-                    
     
 
         

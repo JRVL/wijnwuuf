@@ -7,13 +7,19 @@
 <html lang="en">
 
 <head>
-   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://unpkg.com/typewriter-effect/dist/core.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/plugins/slick/slick.min.js"></script>
+    
+    
+    
 <script>
 
    $( document ).ready(function() {
@@ -128,6 +134,7 @@ $('.search_icon').blur(function(){
                         'theme_location' => 'primary',
                         'link_before' => '<span>',
                         'link_after' => '</span>',
+                        
                        
                         
                     ));

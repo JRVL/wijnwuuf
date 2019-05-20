@@ -106,7 +106,6 @@ add_action( 'widgets_init', 'wijnwuuf_widget_init');
 	add_filter('wp_calculate_image_sizes', 'wijnwuuf_content_image_sizes_attr', 10 , 2);
 
 
- 
 
 
 ?>
