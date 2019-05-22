@@ -4,6 +4,7 @@
     get_header();
 ?>
 
+
 <div class="main-content-width-wrapper">
             <div class="two-column-entry">
                 <h1><div class="title-index"><?php echo get_the_title() ?></div></h1>

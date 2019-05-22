@@ -659,6 +659,64 @@ margin-bottom: 50px;
     
 }
 
+.slick-slide {
+  width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+
+.slick-slide img{
+    width: 250px;
+    height: 180px;
+}
+
+.img-trending {
+  width: 250px !important;
+  height: 180px;
+  float: left;
+
+}
+
+.back-trending {
+    width: 250px;
+    height: 600px !important;
+}
+
+.cat-trending {
+    
+    
+}
+
+.title-trending {
+    
+    
+}
+
+.slick-prev {
+  left: 0;
+  transform: rotate(180deg);
+}
+.slick-next  {
+  right: 0;
+}
+.slick-arrow {
+  top: 50%;
+  height: 26px;
+  width: 14px;
+  margin-top: -13px;
+  position: absolute;
+  font-size: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  background-image: url(https://tarkikromanski.github.io/files/arrow-slider.png);
+  background-repeat: no-repeat;
+}
+
 /**
  * Footer Styles
 */

@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         </div>
-                       </div>
+                   
                 
                         
         <div class="widgetfront">
@@ -203,30 +203,36 @@
             <div class="title-under-trending">meest gelezen blogs</div>
         
         <div class="your-class">
-              <div>your content</div>
-              <div>your content</div>
-              <div>your content</div>
-                <div>your content</div>
-              <div>your content</div>
-              <div>your content</div>
+            <div class="back-trending">
+<div class="img-trending"><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
+                <div class="cat-trending">Druivenrassen</div>
+                <div class="title-trending">Review Gruner veltliner uit Oostenrijk</div>
+         </div>
+            
+            
+        <div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
+    <div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
+<div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
+<div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
+            
+	
      </div>
         
-    
-        
-     <script>
-        $(document).ready(function(){
-  $('.your-class').slick({
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-});
-  });
+  variableWidth: true,
+      });
+    });
+  </script>
 
-         
-        
-        </script>   
-        
+
         
    
         
@@ -238,9 +244,10 @@
     once: true,
 });
 </script>
+ 
     
 
-        
+</body> 
        
 <?php get_footer(); ?>
 
