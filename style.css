@@ -613,8 +613,30 @@ input {
     margin-right: auto;
 }
 
+/* -- Single Page -- */
+
+.single-main {
+    width: 100%;
+    
+}
+
+.single-container {
+    max-width: 57%;
+    margin: 0 auto;
+}
+
+.single-thumb img {
+    float: right;
+    padding-left: 20px;
+    padding-bottom: 20px;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3)
+    
+}
+
+
 
 /* -- Index-Page -- */
+
 
 
 .main-content-width-wrapper {
@@ -623,8 +645,8 @@ input {
 
 .main-content img {
     float: right;
-    padding-left: 50px;
-    padding-bottom: 50px;
+    max-width: 85%;
+    max-height: 100%;
 }
 
 
@@ -1807,7 +1829,7 @@ CSS
     .logo {
     width: 260px;
     margin-left: 6%;
-    margin-top: 2%}
+    margin-top: 0%}
 
 
 
@@ -1817,6 +1839,7 @@ CSS
     
         .header ul {
         margin-right: 3%;
+            margin-top: -1%;
     }
     
     

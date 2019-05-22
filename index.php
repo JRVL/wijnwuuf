@@ -9,8 +9,12 @@
             <div class="two-column-entry">
                 <h1><div class="title-index"><?php echo get_the_title() ?></div></h1>
                 <h5>Geschreven op: <?php echo get_the_date(); ?></h5>
+                
                     
                 <main class="main-content">
+                    <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"> <?php the_post_thumbnail(); ?>
+                    </a>
+                    
                     <?php
                         //start the loop
                       if (have_posts()) :
