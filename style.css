@@ -615,22 +615,62 @@ input {
 
 /* -- Single Page -- */
 
+.waves {
+    padding-top:50px;
+    z-index: -10;
+}
+
 .single-main {
     width: 100%;
+     background-image: url(images/golven.svg);
+    background-repeat: no-repeat;
     
 }
 
-.single-container {
-    max-width: 57%;
-    margin: 0 auto;
+.single-title h1 {
+    font-size: 3em ;
+    text-align: center;
 }
 
-.single-thumb img {
+
+
+.single-container {
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 40px;
+
+}
+
+.single-thumb {
     float: right;
     padding-left: 20px;
     padding-bottom: 20px;
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3)
+    z-index: 10;
+    padding-top: 50px;
     
+}
+
+.single-thumb img {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+
+.single-date {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.single-date:before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 20px;
+    border-bottom: 4px solid #567B69;
+    z-index: 3;
+}
+
+.single-content {
+    padding-top: 8px;
 }
 
 
