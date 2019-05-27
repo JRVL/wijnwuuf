@@ -15,16 +15,23 @@ get_header();
                     
                 <main class="single-content">
                      
-                <div class="single-thumb">    <?php 
+                <div class="single-thumb">
+                    <div data-aos="fade-up" data-aos-duration="1200">
+            
+                        <?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
 	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
                 ?>
                 <img src="<?php echo $image_large_src[0]; ?>"
                   srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
-                  sizes="(min-width: 840px) 450px, (min-width: 720px) calc(50vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  sizes="(min-width: 1200px) 56vw ,
+            (min-width: 1024px) 56vw ,
+            (min-width: 768px) 56vw,
+            50vw"
                   alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
-                    </div>
+                    </div></div>
+                    
                     <div class="single-content"><?php
                         //start the loop
                       if (have_posts()) :
@@ -36,7 +43,10 @@ get_header();
                         endif;
                     
                     ?></div>
-                    
+                   
+<script>
+  AOS.init();
+</script>
                     
                     
                 </main>

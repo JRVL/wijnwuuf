@@ -74,6 +74,13 @@ template {
 
 
 
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
 
 /**
  * Typography
@@ -525,6 +532,7 @@ p {
 }
 
 
+
 .fas searchbar {
     float: left;
     padding-top: 51px;
@@ -622,29 +630,28 @@ input {
 
 .single-main {
     width: 100%;
-     background-image: url(images/golven.svg);
-    background-repeat: no-repeat;
+    margin-top: 20px;
+    background-image: url(images/waves7.svg);
+    background-repeat: repeat;
     
 }
 
 .single-title h1 {
     font-size: 3em ;
     text-align: center;
+    margin-top: -15px;
 }
 
 
 
 .single-container {
-    max-width: 70%;
+    max-width: 56%;
     margin: 0 auto;
-    margin-top: 0px;
     padding: 40px;
 
 }
 
 .single-thumb {
-    float: right;
-    padding-left: 20px;
     padding-bottom: 20px;
     z-index: 10;
     padding-top: 50px;
@@ -663,8 +670,9 @@ input {
 .single-date:before {
     content: "";
     position: absolute;
-    width: 250px;
-    height: 20px;
+    animation: 1s ease-out;
+    width: 0px;
+    height: 25px;
     border-bottom: 4px solid #567B69;
     z-index: 3;
 }
@@ -672,6 +680,20 @@ input {
 .single-content {
     padding-top: 8px;
 }
+
+
+
+/* -- Blog-Page -- */
+
+.blog-main {
+    width: 100%;
+    margin-top: 20px;
+    background-image: url(images/stainsgrey.svg);
+    background-repeat: no-repeat;  
+}
+
+.blog-title
+
 
 
 
@@ -823,54 +845,90 @@ margin-bottom: 50px;
     text-align: center;
 }
 
+
+.insta {
+    margin-bottom: 100px;
+}
+
 /* Create three equal columns that floats next to each other */
 .column1 {
-    padding: 0 0 0 100px;
-  background-image: linear-gradient(to top, rgba(86,123,105,0.6), rgba(86,123,105,0.2));
+  padding: 0 0 0 100px;
+  background-color: #efefef;
   display: inline-block;
   box-sizing: border-box;
   float: left;
   width: 33.33%;
-  height: 280px; /* Should be removed. Only for demonstration */
+  height: 250px; /* Should be removed. Only for demonstration */
 }
 
-.content-column1 {
-     padding: 0 0 0 100px;
-     text-align: left;
-     font-size: 15px;
-     line-height: 1.4em; 
-}
 
 .mailto a[href^="mailto:"]
 { 
   color: black;
 
 }
-
-.footer {
-    background-image: linear-gradient(to top, rgba(86,123,105,0.6), rgba(86,123,105,0.2));
-
-}
-
 .column2 {
-    background-image: linear-gradient(to top, rgba(86,123,105,0.6), rgba(86,123,105,0.2));
+  background-color: #efefef;
   display: inline-block;
+  text-align: left;
   box-sizing: border-box;
-  float: left; margin:auto;
+  float: left; 
+  margin:auto;
   width: 33.33%;
-  height: 280px; /* Should be removed. Only for demonstration */
+  height: 250px; /* Should be removed. Only for demonstration */
 }
+
+.footer-content {
+     width: 70%;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.footer-title {
+    text-align: left;
+    color: #000;
+    margin-top: 40px;
+    font-family: 'Abhaya Libre', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 0em;
+}
+
+.footer-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    margin-top: -5px;
+}
+
 
 .column3 {
-     background-image: linear-gradient(to top, rgba(86,123,105,0.6), rgba(86,123,105,0.2));
+  background-color: #efefef;
   display: inline-block;
   box-sizing: border-box;
-  float: left;
+  float: left; 
+  margin:auto;
   width: 33.33%;
-  height: 280px; /* Should be removed. Only for demonstration */
+  height: 250px; /* Should be removed. Only for demonstration */
 }
 
+.logowit {
+    margin-top: 28px;
+    
+}
 
+.footer2 {
+    background-color: #567B69;
+    text-align: center;
+    color: #000;
+    padding-top: 265px;
+    padding-bottom: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 13px;
+    height: 10px;
+    width: 100%;
+}
 
 /** Icon styles
 *
@@ -880,24 +938,16 @@ margin-bottom: 50px;
   display: inline-block;
   position: relative;
   z-index: 1;
-  width: 50px;
-  height: 50px;
-  border-radius: 20%;
-  font-size: 25px;
-  color: #fff;
+  font-size: 35px;
+  color: #567B69;
   line-height: 52px;
   text-align: center;
-  background-color: #f4f4f4;
 }
 
 
 
-.icon:after {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    content: '';
-    box-sizing: content-box;
+.icon:hover {
+    cursor: pointer;
   }
 
 
@@ -950,14 +1000,19 @@ margin-bottom: 50px;
 *  Sidebar 
 */
 
+.widget-container {
+    width: 100%;
+    background-image: url(images/wavesfront2.svg);
+    background-repeat: no-repeat;
+}
+
 .widgetfront {
     width: 100%;
     height: 670px;
-    margin-top: 270px;
+    margin-top: 90px;
     margin-bottom: 50px;
-   /* background: rgba(86,123,105,0.4);*/
-    background-image: linear-gradient(to top, rgba(86,123,105,0.2), rgba(86,123,105,0.6));
-    
+   /* background: rgba(86,123,105,0.4);
+    background-image: linear-gradient(to top, rgba(86,123,105,0.2), rgba(86,123,105,0.6));*/
 }
 
 .title-big {
@@ -965,7 +1020,7 @@ margin-bottom: 50px;
     font-size: 95px;
     margin-top: 40px;
     margin-left: 140px;
-    color: #f4f4f4;
+    color: rgba(86,123,105,0.2);;
 }
 
 .title-under {
@@ -983,7 +1038,7 @@ margin-bottom: 50px;
     font-size: 35px;
     margin-top: 0px;
     margin-left: 150px;
-    color: #f4f4f4;
+    color: rgba(0,0,0,0.7);
 }
 
 #typewriter {
@@ -1096,6 +1151,18 @@ position: absolute;
 .img-hover-zoom--colorize:hover img {
   filter: grayscale(0);
     overflow: hidden;
+}
+
+/* Brightness-zoom Container */
+.img-hover-zoom--brightness img {
+  transition: transform 2s, filter 0.7s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(50%);
+}
+
+/* The Transformation */
+.img-hover-zoom--brightness:hover img {
+  filter: brightness(100%);
 }
 
 

@@ -58,7 +58,7 @@
                         </div>
                    
                 
-                        
+                        <div class="widget-container">
         <div class="widgetfront">
             <h1 class="title-big">Welkom</h1>
             <div class="title-under">op mijn blog</div>
@@ -88,7 +88,7 @@
      .start();
  </script>
             
-          <?php dynamic_sidebar('sidebar'); ?></div>
+            <?php dynamic_sidebar('sidebar'); ?></div></div>
     
 		                  
 
@@ -248,6 +248,9 @@
     
 
 </body> 
+<div class="insta"> 
+
+  <?php dynamic_sidebar('instagram'); ?></div>
        
 <?php get_footer(); ?>
 

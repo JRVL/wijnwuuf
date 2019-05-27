@@ -5,6 +5,8 @@
 ?>
 <?php get_header(); ?>
 
+<div class="blog-main">
+
 	<article>
         
        <?php
@@ -12,7 +14,7 @@
   $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
   $query_args = array(
     'post_type' => 'post',
-    'posts_per_page' => 3,
+    'posts_per_page' => 4,
     'paged' => $paged
   );
   // create a new instance of WP_Query
@@ -21,18 +23,35 @@
 
 <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
   <article>
-      
-        <div class="thumbnailfront2"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-                        <?php the_post_thumbnail('thumbnail-frontlow');?></a></div>
-    <h1 class="posttitle2" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
+     
+        <div class="boxes">
+                            
+                            <div class="box boxtext">
+                        
+                            <h1 class="posttitle2" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
                         
                         <div class="categorie2" ><?php the_category(', '); ?></div>
                             
                             <h4 class="content2" ><?php the_content(''); ?></h4>
-                               
+                            
+                            <a id="readmorebutton1" class="readmore1" href="<?php the_permalink($id); ?>">Lees meer</a></div>
+                            
+                            <div class="box boximage">
+                             <div data-aos="fade-left" data-aos-duration="1200">
+                               <?php 
+	                   // Get this attachment ID
+	                       $attachment_id = get_post_thumbnail_id( $post->ID );
+	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
+                ?>
+                <img src="<?php echo $image_large_src[0]; ?>"
+                  srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
+                  sizes="(min-width: 840px) 450px, (min-width: 720px) calc(50vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
                             
                             
-                            <a id="readmorebutton1" class="readmore1" href="<?php the_permalink($id); ?>">Lees meer</a>
+                            </div>
+                       
+            </div></div>
   </article>
 <?php endwhile; ?>
 
@@ -51,11 +70,19 @@
   <article>
     <h1>Sorry...</h1>
     <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+      
+     
   </article>
+        
 <?php endif; ?>
+        
+        <script>
+  AOS.init();
+</script>
+           
         
 </article>
 
-		
+</div>
 
 <?php get_footer(); ?>
