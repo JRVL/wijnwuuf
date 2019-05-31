@@ -185,7 +185,7 @@
                            
                    </div>
                
-                            
+                      
                     
                     
                     <?php else : ?>
@@ -193,41 +193,61 @@
                     <?php endif; ?>
                     <?php endwhile; ?>
                     <?php endif; ?>
-        
+                        
+          
                    </div></div>
- 
     
+   <div class="moreblogs"> <img src="<?php bloginfo ('template_url') ?>/images/frontarrow.svg"  alt="arrow" style="width: 120px; padding-right: 25px; padding-top: 20px;">
+    
+    <a id="readmorebutton2" href="http://localhost:8080/wordpress/blogs/page/2/">Naar alle blogs!</a>
+       
+       
+ 
+    </div>
     
     <div class="trending">
             <h1 class="title-big-trending">Populair</h1>
-            <div class="title-under-trending">meest gelezen blogs</div>
+            <div class="title-under-trending">meest gelezen blogs</div> 
+    
+     <div class="your-class">
         
-        <div class="your-class">
-            <div class="back-trending">
-<div class="img-trending"><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
-                <div class="cat-trending">Druivenrassen</div>
-                <div class="title-trending">Review Gruner veltliner uit Oostenrijk</div>
-         </div>
+         
+        <?php $popular = new WP_Query(array('posts_per_page'=>4, 'meta_key'=>'popular_posts', 'orderby'=>'meta_value_num', 'order'=>'DESC'));
+	while ($popular->have_posts()) : $popular->the_post(); ?>
             
+         <div class="trending-item img-hover-zoom img-hover-zoom--brightness"> <a href="<?php the_permalink($id); ?>">
+         <div class="trending-image img-hover-zoom img-hover-zoom--brightness">
+               <?php the_post_thumbnail(); ?></div>
+             
+<div class="trending-data" >
+    <div class="trending-title"><?php the_title(); ?></div>
+	<div class="trending-cat">
+        <h5><?php the_category(', '); ?></h5></div></div></div>
+         
+         
             
-        <div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
-    <div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
-<div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
-<div><img src="https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_1160/https://www.wijnwuuf.nl/wp-content/uploads/2019/05/bourgogne-chardonnay-jumbo1-1160x770.jpg"></div>
-            
-	
-     </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+       
+        </div>
+    
+    
+    </div>
+        
+
         
 
 
   <script type="text/javascript">
+        
     $(document).ready(function(){
       $('.your-class').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  variableWidth: true,
+ slidesToShow: 3,
+ slidesToScroll: 1,
+ autoplay: true,
+ autoplaySpeed: 2000,
+ cssEase: 'linear',
+    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+    nextArrow: '<button class="slide-arrow next-arrow"></button>'
       });
     });
   </script>
@@ -250,7 +270,7 @@
 </body> 
 <div class="insta"> 
 
-  <?php dynamic_sidebar('instagram'); ?></div>
+  </div>
        
 <?php get_footer(); ?>
 

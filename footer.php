@@ -19,7 +19,7 @@
   <div class="column2">
       <div class="footer-content">
     <h1 class="footer-title">Welkom</h1>
-      <br><h2 class="footer-text">Tijdens het Middelburg Wijnfestival heb ik niet alleen (meerdere) wijntjes gedronken, ik heb ook meegelopen met de wijnwandeling van Ed de Graaf. Wist jij dat Middelburg zo’n wijnverleden heeft? </h2>
+      <br><h2 class="footer-text">Wat leuk dat je mijn blog leest! Je hebt het vast al gemerkt.. ik ben dól op wijn en combineer deze passie met mijn passie voor schrijven en fotografie. Naast het schrijven deel ik ook graag mijn wijnkennis door het geven van wijnproeverijen. </h2>
       <a id="readmorebutton1" style="padding: 0.45em 1.8em 0.45em 1.8em; font-size: 12px; margin: auto; margin-right: 15px;">Over mij</a><a id="readmorebutton1" style="padding: 0.45em 1.8em 0.45em 1.8em; font-size: 12px; margin: auto;">Proeverij</a>
   </div></div>
     

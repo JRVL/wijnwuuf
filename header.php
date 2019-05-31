@@ -142,8 +142,9 @@ $('.search_icon').blur(function(){
             ?> 
             <span id="slide-line"></span>     
      
+        
     </header>
-    
+   
   
 </head>
 

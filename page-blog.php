@@ -6,19 +6,19 @@
 <?php get_header(); ?>
 
 <div class="blog-main">
-
-	<article>
-        
-       <?php
-  // set up or arguments for our custom query
-  $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-  $query_args = array(
+    
+   <?php
+// Protect against arbitrary paged values
+$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
+ 
+$args = array(
     'post_type' => 'post',
+    'post_status'=>'publish',
     'posts_per_page' => 4,
-    'paged' => $paged
-  );
-  // create a new instance of WP_Query
-  $the_query = new WP_Query( $query_args );
+    'paged' => $paged,
+);
+ 
+$the_query = new WP_Query($args);
 ?>
 
 <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post(); // run the loop ?>
@@ -53,31 +53,33 @@
                        
             </div></div>
   </article>
-<?php endwhile; ?>
+        
 
-<?php if ($the_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
-  <nav class="prev-next-posts">
-    <div class="prev-posts-link">
-      <?php echo get_next_posts_link( 'Older Entries', $the_query->max_num_pages ); // display older posts link ?>
-    </div>
-    <div class="next-posts-link">
-      <?php echo get_previous_posts_link( 'Newer Entries' ); // display newer posts link ?>
-    </div>
-  </nav>
-<?php } ?>
-
-<?php else: ?>
-  <article>
-    <h1>Sorry...</h1>
-    <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+<?php endwhile; ?><?php else: ?><?php endif; ?>
+        
       
-     
-  </article>
+<div class="pagination">
+        <?php
+        echo paginate_links( array(
+            'format'  => 'page/%#%',
+            'current' => $paged,
+            'total'   => $the_query->max_num_pages,
+            'mid_size'        => 2,
+            'prev_text'       => __('<'),
+            'next_text'       => __('>')
+        ) );
+        ?>
+    </div>
+
+  
         
-<?php endif; ?>
+
         
-        <script>
-  AOS.init();
+        
+<script>
+  AOS.init({
+    once: true,
+});
 </script>
            
         

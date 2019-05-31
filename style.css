@@ -397,6 +397,7 @@ p {
 
 .header li a {
   display: block;
+  float: left;
   padding: 5px 20px;
   text-decoration: none;
   font-weight: 400;
@@ -503,6 +504,8 @@ p {
     display: none;
   }
 }
+
+
 
 
   /** Sliding Underline **/
@@ -711,7 +714,6 @@ input {
     max-height: 100%;
 }
 
-
     
 
 .two-column-entry {
@@ -769,15 +771,6 @@ margin-bottom: 50px;
     height: 600px !important;
 }
 
-.cat-trending {
-    
-    
-}
-
-.title-trending {
-    
-    
-}
 
 .slick-prev {
   left: 0;
@@ -799,6 +792,11 @@ margin-bottom: 50px;
   background-image: url(https://tarkikromanski.github.io/files/arrow-slider.png);
   background-repeat: no-repeat;
 }
+
+
+
+
+
 
 /**
  * Footer Styles
@@ -1485,7 +1483,140 @@ position: absolute;
     
 }
 
+.trending-item {
+    width: 250px !important;
+    padding: 31px 16px;
+    margin: 0 auto;
+}
 
+.trending-image {
+        position: relative;
+        width: 250px;
+        margin: auto;
+        float: left;
+        height: 180px;  
+        box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
+        
+    }
+
+.trending-cat {
+        position: absolute;
+        font-size: 16px;
+        text-align: left;
+        width: 150px;
+        bottom: 50px;
+        padding-left: 25px;
+        font-family: 'roboto', sans-serif;
+        color: #567B69;
+        background-color: #fff;
+        z-index: 24;
+    }
+
+.trending-cat:before {
+    content: "";
+    position: absolute;
+    width: 22%;
+    height: 18px;
+    border-bottom: 4px solid #567B69;
+    z-index: 3;
+}
+   
+.trending-title {
+        position: absolute;
+        width: 195px;
+        height: 133px;
+        background-color: #fff;
+        font-family: 'Abhaya Libre', sans-serif;
+        text-transform: none;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: normal;
+        color: #000;
+        z-index: 3;
+        padding: 25px;
+    }
+
+a:link { color: #c4c4c4; }
+    
+.trending-data {
+    width: 250px;
+    background-color: #fff;
+    height: 215px;
+    margin-top: 180px;
+    box-shadow: 0 20px 23px -15px rgba(0,0,0,.35);
+    
+}
+
+.your-class {
+    width: 66%;
+    height: 450px;
+    margin: 0 auto;
+    
+}
+
+button{
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.slide-arrow{
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+}
+.prev-arrow{
+  left: -40px;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 15px solid #efefef;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.next-arrow{
+  right: -40px;
+  width: 0;
+  height: 0;
+  border-right: 0 solid transparent;
+  border-left: 15px solid #efefef;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+
+.pagination {
+    margin-bottom: 250px auto;
+    
+}
+
+.pagination .page-numbers {
+   background: #efefef;
+   color: #000;
+   display: block;
+   width: auto;
+   float: left;
+   margin: 4px 4px 4px 0;
+   padding: 15px 18px 14px 18px;
+   text-decoration: none;
+}
+ 
+.pagination .page-numbers:hover {
+   background: #567B69;
+   color: #fff;
+   text-decoration: none;
+}
+ 
+.pagination .current {
+   background: rgba(86,123,105,0.2);
+   color: rgba(0,0,0,.35);
+   padding: 15px 18px 14px 18px;
+}
 
 
 /* --- Readmore button --- */
@@ -1526,6 +1657,28 @@ position: absolute;
   transform: scale(1.05); 
 }
 
+#readmorebutton2 {
+    display:inline-block;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #c4c4c4;
+    padding: 0.85em 2.8em 0.95em 2.8em;
+    color: white;
+    padding-top: -10px;
+    text-decoration: none;
+    transition:  .2s ease-in-out;    
+}
+
+#readmorebutton2:hover {
+  box-shadow: 0 0 11px rgba(0,0,0,.3);
+  transform: scale(1.05); 
+}
+
+.moreblogs {
+    margin-top: 0px;
+    margin-bottom: 75px;
+    text-align: center;
+}
 
 .title-big-trending {
     display: inline-block;
@@ -1545,51 +1698,10 @@ position: absolute;
     color: rgba(0,0,0,0.7);
 }
 
-p.trending-text {
-    position: absolute;
-    width: 200px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin-top: -23px;
-    height: 125px;
-    background-color: #fff;
-    box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
-    font-family:'Roboto', sans-serif;
-    text-transform: none;
-    font-weight: 400;
-    font-size: 1em;
-    line-height: 1.em;
-    margin-bottom: 0em;
-    color:  rgba(0,0,0,0.7);
-    z-index: 3;
-}
 
-.trending-title {
-  position: relative;
-  font-size: 54px;
-  color: rgba(0,0,0,0.7);
-  background-color: #fff;
-  padding: 188px 25px 23px 25px;
-  z-index: 2;
-  
-}
-.trending-title:before  {
-    content: "";
-    position: absolute;
-    width: 20%;
-    height: 3px;
-    bottom: 42px;
-    left: 25px;
-    border-bottom: 4px solid #567B69; 
-    z-index: 3;
-}
 
-.trending {
-  position: relative;
-  margin-left: 50px;
-  margin-right: 5px;
-  margin-top: 30px;
-  box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
+.trending-center {
+    margin: 0 auto;
 }
 
 CSS
@@ -1612,7 +1724,11 @@ CSS
 }
 
 
-
+.prev-next-posts {
+    text-align: center;
+    margin-bottom: 70px;
+}
+ 
 
 
 
