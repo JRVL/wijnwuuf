@@ -199,7 +199,7 @@
     
    <div class="moreblogs"> <img src="<?php bloginfo ('template_url') ?>/images/frontarrow.svg"  alt="arrow" style="width: 120px; padding-right: 25px; padding-top: 20px;">
     
-    <a id="readmorebutton2" href="http://localhost:8080/wordpress/blogs/page/2/">Naar alle blogs!</a>
+    <a id="readmorebutton2" style="margin-top: -70px;"href="http://localhost:8080/wordpress/blogs/page/2/">Naar alle blogs!</a>
        
        
  

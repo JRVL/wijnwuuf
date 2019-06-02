@@ -695,7 +695,6 @@ input {
     background-repeat: no-repeat;  
 }
 
-.blog-title
 
 
 
@@ -1591,8 +1590,10 @@ button{
 
 
 .pagination {
-    margin-bottom: 250px auto;
-    
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 150px;
 }
 
 .pagination .page-numbers {
@@ -1613,9 +1614,10 @@ button{
 }
  
 .pagination .current {
-   background: rgba(86,123,105,0.2);
-   color: rgba(0,0,0,.35);
+   background: #567B69;
+   color: #fff;
    padding: 15px 18px 14px 18px;
+
 }
 
 
@@ -1675,10 +1677,11 @@ button{
 }
 
 .moreblogs {
-    margin-top: 0px;
-    margin-bottom: 75px;
+    margin-top: -100px;
+    margin-bottom: 15px;
     text-align: center;
 }
+
 
 .title-big-trending {
     display: inline-block;
@@ -1930,6 +1933,7 @@ CSS
     
     .header ul {
         margin-right: 3%;
+        float: left;
     }
     
    h1 {

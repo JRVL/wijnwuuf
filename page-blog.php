@@ -5,6 +5,7 @@
 ?>
 <?php get_header(); ?>
 
+
 <div class="blog-main">
     
    <?php
@@ -52,10 +53,10 @@ $the_query = new WP_Query($args);
                             </div>
                        
             </div></div>
-  </article>
+    </article>
         
 
-<?php endwhile; ?><?php else: ?><?php endif; ?>
+<?php endwhile; ?></div>
         
       
 <div class="pagination">
@@ -69,9 +70,11 @@ $the_query = new WP_Query($args);
             'next_text'       => __('>')
         ) );
         ?>
+    
+    
     </div>
 
-  
+<?php endif; ?>
         
 
         
@@ -83,8 +86,6 @@ $the_query = new WP_Query($args);
 </script>
            
         
-</article>
 
-</div>
 
 <?php get_footer(); ?>
