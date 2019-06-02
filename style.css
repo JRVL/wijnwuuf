@@ -165,7 +165,7 @@ a:-webkit-any-link {
 }
 
 a:visited {
-   color: -webkit-link;
+   color: #c4c4c4;
 }
 
 p {
@@ -222,11 +222,11 @@ p {
 
 
   a, a:visited{
-    color: #000;
+    color: #c4c4c4;
     text-decoration:none;
   }
   a:hover{
-    color: #567B69;
+    color: #c4c4c4;
   }
 }
 
@@ -1590,18 +1590,17 @@ button{
 
 
 .pagination {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 40%;
     padding-bottom: 150px;
 }
+
 
 .pagination .page-numbers {
    background: #efefef;
    color: #000;
    display: block;
    width: auto;
-   float: left;
+   float:left;
    margin: 4px 4px 4px 0;
    padding: 15px 18px 14px 18px;
    text-decoration: none;
@@ -1666,7 +1665,6 @@ button{
     background-color: #c4c4c4;
     padding: 0.85em 2.8em 0.95em 2.8em;
     color: white;
-    padding-top: -10px;
     text-decoration: none;
     transition:  .2s ease-in-out;    
 }
@@ -1677,10 +1675,17 @@ button{
 }
 
 .moreblogs {
-    margin-top: -100px;
-    margin-bottom: 15px;
+    margin-top: -47px;
+    position: relative;
+    margin-bottom: 80px;
     text-align: center;
 }
+
+.arrow {
+   margin-left: calc(50% - 240px);
+margin-top: -100px;
+}
+
 
 
 .title-big-trending {

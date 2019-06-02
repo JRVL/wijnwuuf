@@ -32,18 +32,7 @@ query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC');
                     
                     ?>
                     
-                    <div class="pagination">
-        <?php
-        echo paginate_links( array(
-            'format'  => 'page/%#%',
-            'current' => $paged,
-            'total'   => $the_query->max_num_pages,
-            'mid_size'        => 2,
-            'prev_text'       => __('&laquo; Prev Page'),
-            'next_text'       => __('Next Page &raquo;')
-        ) );
-        ?>
-    </div>
+
                     
                     
                 </main>
