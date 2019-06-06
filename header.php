@@ -64,28 +64,52 @@ j$(function(){
 });
        });
     </script>
+    <script>
+    $(document).ready(function(){
+  var lastScrollTop = 0;
+    $(document).scroll(function(event){
+       var st = $(this).scrollTop();
+       $('head>style').last().remove();
+       if (st > lastScrollTop){
+        
+            $('.logo').css({
+                sizeof: function() {
+                var sizeof = ((1 - (400 - st) / 400) * 1.8);
+                return opacity;
+            }, left: st
+        
+           });
+       } else {
+          $('.logo').css({
+                opacity: function() {
+                var opacity = ((1 - (400 - st) / 400) * 1.8);
+                return opacity;
+            }, left: st
+        
+           });
+       }
+       lastScrollTop = st;
+    });
+});
+</script>
+    
+    
+    
+    
 <script>
-   $(function() {
-       $(window).scroll(function () {
-           if ($(window).scrollTop() > 5) {
-               $('.header').addClass('smaller');
-               $('.main-navigation').addClass('navifixed');
-               
-           }
-           
-           else {
-               $('.header').removeClass('smaller');
-               $('.main-navigation').removeClass('navifixed');
-           }
-       });
-   });
-    
-    
 
+
+/*$(window).scroll(function(){
+    if ($(this).scrollTop() > 5) {
+       $('.header').addClass('smaller');
+        $('.header').addClass('.navifixed');
+    } else {
+       $('.header').removeClass('smaller');
+        $('.header').removeClass('.navifixed');
+    }
+});
        
-    </script>
-    
-    <script>   
+  
 jQuery(document).ready(function($) {
   $(".search_icon").click(function() {
     $(".spicewpsearchform").toggle();
@@ -98,7 +122,7 @@ jQuery(document).ready(function($) {
     }
   });
 });
-       
+       */
     </script>
     
     <script>

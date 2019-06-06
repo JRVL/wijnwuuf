@@ -56,9 +56,9 @@ $the_query = new WP_Query($args);
     </article>
         
 
-<?php endwhile; ?></div>
+<?php endwhile; ?>
         
-      
+<div class="pagecenter">  
 <div class="pagination">
         <?php
         echo paginate_links( array(
@@ -72,7 +72,7 @@ $the_query = new WP_Query($args);
         ?>
     
     
-    </div>
+    </div></div> </div>
 
 <?php endif; ?>
         

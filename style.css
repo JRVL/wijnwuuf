@@ -175,38 +175,47 @@ p {
 }
 
 
+img .emoji {  
+ margin: 0px !important;
+ display: inline block!important;
+    font-size: 1em;
+}
+
+
 /**
  * Header Styles
 */
 
 
 .header.smaller {
-	height: 5px;
+	height: 35px;
     box-shadow: 0 1px 7px rgba(0,0,0,.2);
+    z-index: 999999999;
 }
 
 .header.smaller .logo {
 	width: 140px;
-    margin-top: -19px;
-    margin-left: 6%;
-
-
+    padding-top: 8px;
+    padding-left: 40px;
+    transition: all 0.2s ease-in-out 0s;
 }
 
+
 .header.logo {
-    	transition: 1.3s ease-in;
+    position: fixed;
 
 }
 
 .header.navifixed {
-    margin-top: -5px;
+    padding-top: -32px;
 
 }
 
 
 .header {
-    margin-right: 6%;
-    margin-top: 10px;
+    padding-right: 40px;
+    padding-top: 30px;
+    background: #fff;
     
     
 }
@@ -234,11 +243,6 @@ p {
         padding: 0px 15px;
         font-size: 14px;
         color:#000;
-}
-.header {
-  position: relative;
-  background-color:#fff;
-  box-shadow: 0 0 12px rgba(#000,0.26);
 }
 
 .current-menu-item a{
@@ -388,7 +392,7 @@ p {
 }
 
 .header ul {
-  margin-right: 9%;
+  margin-right: 2%;
   padding: 0;
   list-style: none;
   overflow: hidden;
@@ -398,7 +402,7 @@ p {
 .header li a {
   display: block;
   float: left;
-  padding: 5px 20px;
+  padding: 5px 10px;
   text-decoration: none;
   font-weight: 400;
 }
@@ -493,16 +497,21 @@ p {
     float: left;
   }
   .header li a {
-    padding: 20px 30px;
+    padding: 35px 16px;
+      color: #000;
   }
   .header .menu {
     clear: none;
     float: right;
+    margin-right: 6%;
     max-height: none;
   }
   .header .menu-icon {
     display: none;
   }
+    
+
+    
 }
 
 
@@ -512,7 +521,7 @@ p {
 #slide-line {
   position: absolute;
   display: inline-block;
-  bottom: 28px;
+  bottom: 20px;
   padding-left: 1px;
   margin-left: 1px;
   height: 6px;
@@ -640,6 +649,8 @@ input {
 }
 
 .single-title h1 {
+    width: 90%;
+    margin: 0 auto;
     font-size: 3em ;
     text-align: center;
     margin-top: -15px;
@@ -656,12 +667,14 @@ input {
 
 .single-thumb {
     padding-bottom: 20px;
+    max-width: 100%;
     z-index: 10;
-    padding-top: 50px;
+    padding-top: 0px;
     
 }
 
 .single-thumb img {
+    height: auto;
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
 }
 
@@ -684,15 +697,23 @@ input {
     padding-top: 8px;
 }
 
+.single-content img {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
 
+    
+}
 
 /* -- Blog-Page -- */
 
 .blog-main {
     width: 100%;
     margin-top: 20px;
-    background-image: url(images/stainsgrey.svg);
+    background-size:cover;
+    background: url(images/greystain.svg) ;
     background-repeat: no-repeat;  
+    
 }
 
 
@@ -833,7 +854,10 @@ margin-bottom: 50px;
     color: #567B69;
 }
 
-
+.col {
+    float: left;
+    width: 33.33%;
+}
 
 
 .row-front {
@@ -853,8 +877,6 @@ margin-bottom: 50px;
   background-color: #efefef;
   display: inline-block;
   box-sizing: border-box;
-  float: left;
-  width: 33.33%;
   height: 250px; /* Should be removed. Only for demonstration */
 }
 
@@ -869,9 +891,7 @@ margin-bottom: 50px;
   display: inline-block;
   text-align: left;
   box-sizing: border-box;
-  float: left; 
   margin:auto;
-  width: 33.33%;
   height: 250px; /* Should be removed. Only for demonstration */
 }
 
@@ -903,23 +923,22 @@ margin-bottom: 50px;
   background-color: #efefef;
   display: inline-block;
   box-sizing: border-box;
-  float: left; 
   margin:auto;
-  width: 33.33%;
   height: 250px; /* Should be removed. Only for demonstration */
 }
 
 .logowit {
+    width: 180px;
     margin-top: 28px;
-    foidasds
 }
 
 .footer2 {
     background-color: #567B69;
+    float: left;
     text-align: center;
     color: #000;
-    padding-top: 265px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     font-size: 13px;
@@ -1588,12 +1607,23 @@ button{
   border-bottom: 10px solid transparent;
 }
 
-
-.pagination {
-    padding-left: 40%;
-    padding-bottom: 150px;
+.pagecenter {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
 
+.pagination {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 100px;
+}
+
+.page-numbers {
+    padding-left: auto;
+    padding-right: auto;
+}
 
 .pagination .page-numbers {
    background: #efefef;
@@ -1853,10 +1883,35 @@ CSS
         padding-bottom: 20px;
     }
     
-   
+   .single-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+
+}
+
+.single-title h1 {
+    font-size: 1.85rem;
+    line-height: 1.0909090909090908em;
+}
+
+ .column1, .column2, .column3 {
+        width: 100%;
+    }
+    .logowit {
+        margin-left: -85px;
+        margin-bottom: -100px;
+    }
     
-    
-    
+    .column2 {
+        margin-top: -110px;
+    }
+
+    .footer2 {
+        padding-top: 
+        width: 100%;
+        height: 30px;
+    }
 }
 
 
@@ -1872,9 +1927,9 @@ CSS
 .header li a {
   margin-top: 5px;
   padding-top: 20px;
-  padding-left: 19px;
+  padding-left: 10px;
   padding-bottom: 20px; 
-  padding-right: 19px;
+  padding-right: 10px;
     }
     
     .header ul {
@@ -1914,8 +1969,20 @@ CSS
         margin-top: -42px;
         margin-left: 333px;;
     }
-    
+
+.single-container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 40px;
+
+}
   
+.single-title h1 {
+    font-size: 2.15rem;
+    line-height: 1.0909090909090908em;
+}
+    
+
 
 }
 
@@ -1989,7 +2056,17 @@ CSS
         margin-left: 333px;;
     }
     
-  
+    .single-container {
+    max-width: 65%;
+    margin: 0 auto;
+    padding: 40px;
+
+}
+    
+.single-title h1 {
+    font-size: 2.45rem;
+    line-height: 1.0909090909090908em;
+}
     
 
    }
@@ -2039,7 +2116,7 @@ CSS
         margin-left: 333px;;
     }
     
-    
+
     
     
     
@@ -2070,8 +2147,8 @@ CSS
     }
     
         .header ul {
-        margin-right: 3%;
-            margin-top: -1%;
+        margin-right: 10px;
+        margin-top: -1%;
     }
     
     

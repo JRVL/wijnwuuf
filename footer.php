@@ -8,7 +8,7 @@
 
 
 <div class="footer">
-  <div class="column1">
+  <div class="col column1">
        <div class="footer-content">
       
           <a href=""><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logowit"></a>
@@ -16,14 +16,14 @@
      </div></div>
     
     
-  <div class="column2">
+  <div class="col column2">
       <div class="footer-content">
     <h1 class="footer-title">Welkom</h1>
       <br><h2 class="footer-text">Wat leuk dat je mijn blog leest! Je hebt het vast al gemerkt.. ik ben dól op wijn en combineer deze passie met mijn passie voor schrijven en fotografie. Naast het schrijven deel ik ook graag mijn wijnkennis door het geven van wijnproeverijen. </h2>
       <a id="readmorebutton1" style="padding: 0.45em 1.8em 0.45em 1.8em; font-size: 12px; margin: auto; margin-right: 15px;">Over mij</a><a id="readmorebutton1" style="padding: 0.45em 1.8em 0.45em 1.8em; font-size: 12px; margin: auto;">Proeverij</a>
   </div></div>
     
-    <div class="column3">
+    <div class="col column3">
     <div class="footer-content">
         <h1 class="footer-title">Contact</h1>
         <h2 class="footer-text">

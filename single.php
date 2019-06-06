@@ -27,8 +27,8 @@ get_header();
                   srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
                   sizes="(min-width: 1200px) 56vw ,
             (min-width: 1024px) 56vw ,
-            (min-width: 768px) 56vw,
-            50vw"
+            (min-width: 768px) 80vw,
+            100vw"
                   alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
                     </div></div>
                     
@@ -38,7 +38,7 @@ get_header();
                             while (have_posts()):
                                     the_post();
                                         the_content();
-                    
+                                
                             endwhile;
                         endif;
                     
