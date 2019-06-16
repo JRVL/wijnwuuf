@@ -24,9 +24,25 @@
 
                     
         <div>
-                 <div class="boxestop">  
+            
+            <div class="boxestop">
+                 <div class="section group">  
                         
-                        <div class="boxtop boxtexttop">
+                          
+                      <div class="col spanright">
+                        <div data-aos="fade-up" data-aos-duration="1200" >
+                            <?php 
+	                   // Get this attachment ID
+	                       $attachment_id = get_post_thumbnail_id( $post->ID );
+                            $image_large_src = wp_get_attachment_image_src( $attachment_id, 'large' );
+                            ?>
+                <img src="<?php echo $image_large_src[0]; ?>"
+                  srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
+                  sizes="(min-width: 1200px) 638px, (min-width: 992px) 438px, (min-width: 760px) calc(50vw - 5vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
+                         </div></div>
+                     
+                        <div class="col spanleft">
                          <div data-aos="fade-right" data-aos-duration="1200">
                                 <h1 class="posttitle1"  href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
                         
@@ -38,19 +54,7 @@
                                     <a id="readmorebutton" class="readmore" href="<?php the_permalink($id); ?>">Lees meer</a></div>
                              </div>
                                     </div>
-                     
-                      <div class="boxtop boximagetop">
-                        <div data-aos="fade-up" data-aos-duration="1200" >
-                            <?php 
-	                   // Get this attachment ID
-	                       $attachment_id = get_post_thumbnail_id( $post->ID );
-                            $image_large_src = wp_get_attachment_image_src( $attachment_id, 'large' );
-                            ?>
-                <img src="<?php echo $image_large_src[0]; ?>"
-                  srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
-                  sizes="(min-width: 1200px) 638px, (min-width: 992px) 438px, (min-width: 768px) 360px,  (min-width: 320px) 120px"
-                  alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
-                         </div></div>
+                
                      
                      
                                 </div>
@@ -97,16 +101,6 @@
              
                         <div class="boxes">
                             
-                            <div class="box boxtext">
-                        
-                            <h1 class="posttitle2" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
-                        
-                        <div class="categorie2" ><?php the_category(', '); ?></div>
-                            
-                            <h4 class="content2" ><?php the_content(''); ?></h4>
-                            
-                            <a id="readmorebutton1" class="readmore1" href="<?php the_permalink($id); ?>">Lees meer</a></div>
-                            
                             <div class="box boximage">
                              <div data-aos="fade-left" data-aos-duration="1200">
                                <?php 
@@ -116,13 +110,26 @@
                 ?>
                 <img src="<?php echo $image_large_src[0]; ?>"
                   srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
-                  sizes="(min-width: 840px) 450px, (min-width: 720px) calc(50vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  sizes="(min-width: 840px) 450px, (min-width: 720px) 450px,  (min-width: 320px) calc(90vw - 10vw)"
                   alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
                             
                             
                             </div>
                        
-                        </div></div>
+                        </div>
+        
+        <div class="box boxtext">
+                        
+                            <h1 class="posttitle2" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
+                        
+                        <div class="categorie2" ><?php the_category(', '); ?></div>
+                            
+                            <h4 class="content2" ><?php the_content(''); ?></h4>
+                            
+                            <a id="readmorebutton1" class="readmore1" href="<?php the_permalink($id); ?>">Lees meer</a></div>
+        
+        
+        </div>
                     
                     
                     <?php elseif ($count == 3) : ?>   
@@ -148,7 +155,7 @@
                       
                       <div class="categorie3" ><?php the_category(', '); ?></div>
                             
-                            <h4 class="content3" ><?php the_content(''); ?></h4>
+                            <h4 class="content3"><?php the_content(''); ?></h4>
                                
                             
                             
@@ -159,17 +166,7 @@
                         <?php elseif ($count == 4) : ?>   
                 
                <div class="boxes">
-                   
-                   
-                   <div class="box boxtext">
-                            <h1 class="posttitle4" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
-                       
-                       <div class="categorie4" ><?php the_category(', '); ?></div>                          
-                       <h4 class="content4" ><?php the_content(''); ?></h4>
-                            <a id="readmorebutton1" class="readmore4" href="<?php the_permalink($id); ?>">Lees meer</a></div>
-                   
-                   
-                        
+                           
                     <div class="box boximage">
                         <div data-aos="fade-left" data-aos-duration="1200">
                                <?php 
@@ -195,7 +192,16 @@
                     <?php endif; ?>
                         
           
-                   </div></div>
+                   </div>
+        
+        <div class="box boxtext">
+                            <h1 class="posttitle4" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
+                       
+                       <div class="categorie4" ><?php the_category(', '); ?></div>                          
+                       <h4 class="content4" ><?php the_content(''); ?></h4>
+                            <a id="readmorebutton1" class="readmore4" href="<?php the_permalink($id); ?>">Lees meer</a></div>
+        
+        </div>
     
     <div class="arrow"><img src="<?php bloginfo ('template_url') ?>/images/frontarrow1.svg"  alt="arrow" style="width: 120px; padding-right: 25px; "></div>
     
@@ -248,7 +254,37 @@
  autoplaySpeed: 2000,
  cssEase: 'linear',
     prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-    nextArrow: '<button class="slide-arrow next-arrow"></button>'
+    nextArrow: '<button class="slide-arrow next-arrow"></button>',
+          responsive: [
+                            {
+                              breakpoint: 1200,
+                              settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                              }
+                            },
+                            {
+                              breakpoint: 992,
+                              settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                              }
+                            },
+                            {
+                              breakpoint: 762,
+                              settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                              }
+                            },
+                            {
+                              breakpoint: 480,
+                              settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                              }
+                            }
+              ]
       });
     });
   </script>

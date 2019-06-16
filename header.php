@@ -64,7 +64,7 @@ j$(function(){
 });
        });
     </script>
-    <script>
+    <script>/*
     $(document).ready(function(){
   var lastScrollTop = 0;
     $(document).scroll(function(event){
@@ -155,11 +155,12 @@ $('.search_icon').blur(function(){
                     wp_nav_menu( $arg = array (
                         
                         'menu_class' => 'menu',
-                        'container'=>false,
+                        'container_id' => 'cssmenu', 
                         'theme_location' => 'primary',
                         'link_before' => '<span>',
                         'link_after' => '</span>',
-                        
+                        'walker' => new CSS_Menu_Walker()
+
                        
                         
                     ));
