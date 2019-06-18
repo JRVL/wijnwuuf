@@ -98,8 +98,8 @@ j$(function(){
     
 <script>
 
-
-/*$(window).scroll(function(){
+/*
+$(window).scroll(function(){
     if ($(this).scrollTop() > 5) {
        $('.header').addClass('smaller');
         $('.header').addClass('.navifixed');
@@ -108,6 +108,8 @@ j$(function(){
         $('.header').removeClass('.navifixed');
     }
 });
+
+*/
        
   
 jQuery(document).ready(function($) {
@@ -122,7 +124,7 @@ jQuery(document).ready(function($) {
     }
   });
 });
-       */
+       
     </script>
     
     <script>

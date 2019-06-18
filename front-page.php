@@ -102,7 +102,7 @@
                         <div class="boxes">
                             
                             <div class="box boximage">
-                             <div data-aos="fade-left" data-aos-duration="1200">
+                             <div data-aos="fade-right" data-aos-duration="1200">
                                <?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
@@ -139,7 +139,7 @@
                 <div class="boxes-middle">
                     
                         <div class="box boximage-middle">
-                        <div data-aos="fade-right" data-aos-duration="1200">   <?php 
+                        <div data-aos="fade-up" data-aos-duration="1200">   <?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
 	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
@@ -168,7 +168,7 @@
                <div class="boxes">
                            
                     <div class="box boximage">
-                        <div data-aos="fade-left" data-aos-duration="1200">
+                        <div data-aos="fade-right" data-aos-duration="1200">
                                <?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
