@@ -117,17 +117,22 @@ h1 {
 }
 
 h2 {
+    font-family: 'Abhaya Libre', sans-serif;
     font-weight: 400;
     font-size: 1.9375em;
-    line-height: 1.5483870967741935em;
+    color: #567B69;
+    line-height: 1.09em;
+    margin-top: 1em;
+    margin-bottom: 0.3em;
 }
 
 h3 {
+    font-family:'Roboto', sans-serif;
     font-weight: 600;
-    font-size: 1.375em;
-    line-height: 1.0909090909090908em;
-    margin-top: 1.0909090909090908em;
-    margin-bottom: 0em;
+    font-size: 1.1075em;
+    line-height: 0.19em;
+    margin-top: 2.4em;
+    margin-bottom: 0.2em;
 }
 
 h4 {
@@ -136,7 +141,7 @@ h4 {
     font-weight: 400;
     font-size: 1em;
     line-height: 1.6em;
-    margin-top: 1.5em;
+    margin-top: 1.6em;
     margin-bottom: 0em;
 }
 
@@ -168,7 +173,24 @@ a:visited {
    color: #c4c4c4;
 }
 
+a.tablepress:link {
+	font-family: Roboto;
+	font-size: 10px;
+	color: green;
+}
+
 p {
+    line-height: 1.8em;
+    font-size: 1em;
+    color: #333;
+}
+
+ul {
+    
+    
+}
+
+li {
     line-height: 1.8em;
     font-size: 1em;
     color: #333;
@@ -187,14 +209,17 @@ height: 1em !important;
 
 
 .header.smaller {
-	height: 35px;
-    box-shadow: 0 1px 7px rgba(0,0,0,.2);
+    margin-top: -32px;
+	height: 55px;
+    width: 100%;
+    border-bottom: 1px solid #f3f3f3;
+    position: fixed;
     z-index: 999999999;
 }
 
 .header.smaller .logo {
 	width: 140px;
-    padding-top: 8px;
+    padding-top: 4px;
     padding-left: 40px;
     transition: all 0.2s ease-in-out 0s;
 }
@@ -206,7 +231,8 @@ height: 1em !important;
 }
 
 .header.navifixed {
-    padding-top: -32px;
+ padding-top: -20px;
+    background: red;
 
 }
 
@@ -254,8 +280,8 @@ height: 1em !important;
 #cssmenu {
   height: 37px;
 	display: block;
-	padding: 40;
-	margin: 20px 10px ;
+	margin-top: 4px ;
+    margin-right: 60px ;
     float: right;
 	width: auto;
 	border-color: #080808;
@@ -274,6 +300,7 @@ height: 1em !important;
   float: left;
   min-height: 1px;
   vertical-align: middle;
+    
 }
 #cssmenu ul li.hover,
 #cssmenu ul li:hover {
@@ -288,9 +315,11 @@ height: 1em !important;
   left: 0;
   z-index: 598;
   width: 100%;
+ 
 }
 #cssmenu ul ul li {
   float: none;
+
 }
 #cssmenu ul ul ul {
   top: 0;
@@ -306,6 +335,7 @@ height: 1em !important;
 }
 #cssmenu ul ul {
   margin-top: 0;
+  
 }
 #cssmenu ul ul li {
   font-weight: normal;
@@ -391,6 +421,13 @@ height: 1em !important;
   background: #fff;
   color: #000;
 }
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li.active > a {
+  background: #f3f3f3;
+  color: #567B69;
+}
+
 
 #cssmenu ul li.has-sub > a:after {
   content: '';
@@ -524,11 +561,15 @@ input {
   display: inline-block;
   padding-left: 1px;
   margin-left: 1px;
-  margin-top: 70px;
-  height: 6px;
+  margin-top: 52px;
+  height: 5px;
   background-color: #567b69;
   transition: all .3s ease;
   z-index: 9999999999;
+}
+
+#slide-line ul:hover {
+display: none;
 }
 
 
@@ -592,11 +633,24 @@ input {
 
 /* -- About-Page -- */
 
+.about-main {
+    margin-bottom: 100px;
+}
+
 .about-title {
-    margin-top: 150px;
+    margin-top: 10px;
     width: 63%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.about-title:before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    top: 235px;
+    border-bottom: 1px solid #f3f3f3; 
+    z-index: 3;
 }
 
 .about-content {
@@ -605,10 +659,34 @@ input {
     margin-right: auto;
 }
 
+
+
+/* -- Full-width-page Page -- */
+.full-width-title {
+    margin-top: 10px;
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.full-width-title:before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    top: 235px;
+    border-bottom: 1px solid #f3f3f3; 
+    z-index: 3;
+}
+
+.full-width-content {
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* -- Single Page -- */
 
 .waves {
-    padding-top:50px;
+    padding-top:150px;
     z-index: -10;
 }
 
@@ -616,7 +694,8 @@ input {
     width: 100%;
     margin-top: 20px;
     background-image: url(images/waves7.svg);
-    background-repeat: repeat;
+    background-repeat: no-repeat;
+    background-position:0px 150px;
     
 }
 
@@ -625,7 +704,8 @@ input {
     margin: 0 auto;
     font-size: 3em ;
     text-align: center;
-    margin-top: -15px;
+    margin-top: -55px;
+    margin-bottom: 20px;
 }
 
 
@@ -634,6 +714,7 @@ input {
     max-width: 56%;
     margin: 0 auto;
     padding: 40px;
+    
 
 }
 
@@ -651,7 +732,8 @@ input {
 }
 
 .single-date {
-    padding-top: 15px;
+    padding-top: -95px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -667,6 +749,8 @@ input {
 
 .single-content {
     padding-top: 8px;
+    padding-bottom: 40px;
+    
 }
 
 .single-content img {
@@ -677,11 +761,93 @@ input {
     
 }
 
+/* -- Related -- */
+
+.related {
+    padding
+    height: 80px;
+    max-width: 56%;
+    margin: 0 auto;
+    border-top: 1px solid #f3f3f3;
+}
+
+
+.relatedcontent {
+    height: 450px;
+    max-width: 56%;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.related-item {
+    width: 200px !important;
+    padding: 30px 10px;
+    float: left;
+
+}
+
+.related-image {
+        position: relative;
+        width: 200px;
+        margin: auto;
+        float: left; 
+        box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
+        
+    }
+
+.related-cat {
+        position: absolute;
+        font-size: 13px;
+        text-align: left;
+        width: 150px;
+        padding-left: 15px;
+        padding-top: 115px;
+        font-family: 'roboto', sans-serif;
+        color: #567B69;
+        z-index: 44;
+    }
+
+.related-cat:before {
+    content: "";
+    position: absolute;
+    width: 22%;
+    height: 12px;
+    border-bottom: 3px solid #567B69;
+    z-index: 3;
+}
+   
+.related-title {
+        position: absolute;
+        width: 170px;
+        height: 73px;
+        background-color: #fff;
+        font-family: 'Abhaya Libre', sans-serif;
+        text-transform: none;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: normal;
+        color: #000;
+        z-index: 36;
+        padding: 15px;
+        
+    }
+    
+.related-data {
+    width: 200px;
+    background-color: #fff;
+    height: 150px;
+    margin-top: 145px;
+    box-shadow: 0 20px 23px -15px rgba(0,0,0,.35);
+    
+}
+
+
+
 /* -- Blog-Page -- */
 
 .blog-main {
     width: 100%;
-    margin-top: 20px;
+    margin-top: -10px;
     background-size:cover;
     background: url(images/greystain.svg)  0px 250px  ;
     background-repeat: no-repeat;  
@@ -691,6 +857,22 @@ input {
 
 
 
+/* -- Category-Page -- */
+
+.archive-title {
+    max-width: 750px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+/*.archive-title:before {
+    content: "";
+    position: absolute;
+    width: 22%;
+    height: 36px;
+    border-bottom: 1px solid #f3f3f3;
+    z-index: 3;
+}*/
 
 /* -- Index-Page -- */
 
@@ -702,7 +884,7 @@ input {
 
 .main-content img {
     float: right;
-    max-width: 85%;
+    max-width: 80%;
     max-height: 100%;
 }
 
@@ -713,7 +895,6 @@ input {
     /*box-shadow: 0 0 2.3rem rgba(0, 0, 0, 0.4);*/
     border: 0px solid #c4c4c4;
     padding-left: 35px;
-    margin-top: 130px;
     margin-left: auto;
     margin-right:auto;
     width: 63%;
@@ -722,6 +903,8 @@ input {
 .title-index {
     max-width: 80%;
 }
+
+
 
 .widgetfront-right {
     float: left;
@@ -908,7 +1091,7 @@ margin-bottom: 50px;
     text-align: center;
     color: #000;
     padding-top: 15px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
     font-size: 13px;
@@ -986,17 +1169,19 @@ margin-bottom: 50px;
 *  Sidebar 
 */
 
-.widget-container {
-    width: 100%;
-    background-image: url(images/wavesfront2.svg);
-    background-repeat: no-repeat;
+.widgetarea {
+    background: #f3f3f3;
+    height: 790px;
+}
+
+.widget-container-down img {
+    height: 300px;
 }
 
 .widgetfront {
     width: 100%;
-    height: 670px;
-    margin-top: 90px;
-    margin-bottom: 50px;
+    height: 450px;
+    margin-top: 50px;
    /* background: rgba(86,123,105,0.4);
     background-image: linear-gradient(to top, rgba(86,123,105,0.2), rgba(86,123,105,0.6));*/
 }
@@ -1004,7 +1189,7 @@ margin-bottom: 50px;
 .title-big {
     display: inline-block;
     font-size: 95px;
-    margin-top: 40px;
+    margin-top: -60px;
     margin-left: 140px;
     color: rgba(86,123,105,0.2);;
 }
@@ -1047,7 +1232,7 @@ margin-bottom: 50px;
 .widget-image {
   position: relative;
   width: 250px;
-  height: 180px;
+  height: 141px;
   float: left;
   z-index: 100;
   overflow: hidden;
@@ -1057,10 +1242,20 @@ margin-bottom: 50px;
 .img-hover-zoom img {
   position: absolute;
   float: left;
-  width: 250px;
+  width: 250x;
   height: 180px;
   overflow: hidden;
-    z-index: 100;/* Removing this will break the effects */
+  z-index: 100;/* Removing this will break the effects */
+}
+
+
+.img-hover-zoom-trending img {
+  position: absolute;
+  float: left;
+  width: 200px;
+  height: 140px;
+  overflow: hidden;
+  z-index: 100;/* Removing this will break the effects */
 }
 
 /*.widget img {
@@ -1247,17 +1442,17 @@ position: absolute;
 
 .boxes {
     display: table;
-    margin:auto;
+    margin: auto;
     max-width: 750px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .box {
   display: table-cell;
   vertical-align:middle;
   width: 100%;
-    padding: 25px;
+  padding: 55px;
 }
 
 .boximage {
@@ -1483,6 +1678,7 @@ position: absolute;
 }
 
 .trending-item {
+
     width: 250px !important;
     padding: 31px 20px;
 }
@@ -1597,6 +1793,7 @@ button{
     position: relative;
     display: inline-block;
     margin: 0;
+    padding-top: 40px;
     padding-bottom: 100px;
 }
 
@@ -1685,22 +1882,22 @@ button{
 }
 
 .moreblogs {
-    margin-top: -47px;
+    margin-top: -37px;
     position: relative;
     margin-bottom: 80px;
     text-align: center;
 }
 
 .arrow {
-   margin-left: calc(50% - 240px);
-margin-top: -100px;
+   margin-left: calc(50% - 200px);
+    margin-top: -30px;
 }
 
 
 
 .title-big-trending {
     display: inline-block;
-    font-size: 95px;
+    font-size: 65px;
     margin-top: 40px;
     margin-left: 140px;
     color: rgba(86,123,105,0.2);
@@ -1710,9 +1907,9 @@ margin-top: -100px;
     position: relative;
     font-family: 'Conv_03-streetlight-demo-version';
     font-weight: 300;
-    font-size: 50px;
-    margin-left: 330px;
-    margin-top: -75px;
+    font-size: 35px;
+    margin-left: 280px;
+    margin-top: -50px;
     color: rgba(0,0,0,0.7);
 }
 

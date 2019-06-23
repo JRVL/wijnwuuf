@@ -65,32 +65,51 @@ j$(function(){
        });
     </script>
     <script>/*
-    $(document).ready(function(){
-  var lastScrollTop = 0;
-    $(document).scroll(function(event){
-       var st = $(this).scrollTop();
-       $('head>style').last().remove();
-       if (st > lastScrollTop){
-        
-            $('.logo').css({
-                sizeof: function() {
-                var sizeof = ((1 - (400 - st) / 400) * 1.8);
-                return opacity;
-            }, left: st
-        
-           });
-       } else {
-          $('.logo').css({
-                opacity: function() {
-                var opacity = ((1 - (400 - st) / 400) * 1.8);
-                return opacity;
-            }, left: st
-        
-           });
-       }
-       lastScrollTop = st;
-    });
+        jQuery( document ).ready(function() {
+   
+
+        var fadeStart=15 // 100px scroll or less will equiv to 1 opacity
+    ,fadeUntil=100 // 200px scroll or more will equiv to 0 opacity
+    ,fading = $('.logo');
+
+jQuery(window).bind('scroll', function(){
+    var offset = $(document).scrollTop()
+        ,opacity=0
+    ;
+    if( offset<=fadeStart ){
+        opacity=1;
+    }else if( offset<=fadeUntil ){
+        opacity=1-offset/fadeUntil;
+    }
+    fading.css('opacity',opacity).html(opacity);
 });
+     });   
+//    $(document).ready(function(){
+//  var lastScrollTop = 0;
+//    $(document).scroll(function(event){
+//       var st = $(this).scrollTop();
+//       $('head>style').last().remove();
+//       if (st > lastScrollTop){
+//        
+//            $('.logo').css({
+//                sizeof: function() {
+//                var sizeof = ((1 - (400 - st) / 400) * 1.8);
+//                return opacity;
+//            }, left: st
+//        
+//           });
+//       } else {
+//          $('.logo').css({
+//                opacity: function() {
+//                var opacity = ((1 - (400 - st) / 400) * 1.8);
+//                return opacity;
+//            }, left: st
+//        
+//           });
+//       }
+//       lastScrollTop = st;
+//    });
+//});
 </script>
     
     
@@ -98,18 +117,18 @@ j$(function(){
     
 <script>
 
-/*
+
 $(window).scroll(function(){
-    if ($(this).scrollTop() > 5) {
+    if ($(this).scrollTop() > 22) {
        $('.header').addClass('smaller');
-        $('.header').addClass('.navifixed');
+       
     } else {
        $('.header').removeClass('smaller');
         $('.header').removeClass('.navifixed');
     }
 });
 
-*/
+
        
   
 jQuery(document).ready(function($) {
@@ -149,9 +168,9 @@ $('.search_icon').blur(function(){
     <?php wp_head(); ?>
     
     <header class="header">
-        <a href=""><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logo"></a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logo"></a>
         <input class="menu-btn" type="checkbox" id="menu-btn">
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span>
             
             <?php 
                     wp_nav_menu( $arg = array (
@@ -167,7 +186,7 @@ $('.search_icon').blur(function(){
                         
                     ));
             ?> 
-            <span id="slide-line"></span>     
+            <span id="slide-line"></span> </label>    
      
         
     </header>

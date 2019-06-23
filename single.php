@@ -50,10 +50,54 @@ get_header();
                     
                     
                 </main>
-    </div></div>
-    <?php get_sidebar('main-sidebar'); ?>
+    </div>
     
-    
+    <div class="widget-container-down"><img src="<?php bloginfo ('template_url') ?>/images/wavesdown.svg"  alt="wave" style="width: 100vw; ;"></div>
+    <div class="related">
+        <h1 class="title-big-trending">Misschien</h1>
+        <div class="title-under-trending">vind je dit ook leuk?</div></div>
+   <?php $orig_post = $post;
+global $post;
+$tags = wp_get_post_tags($post->ID);
+if ($tags) {
+$tag_ids = array();
+foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+$args=array(
+'tag__in' => $tag_ids,
+'post__not_in' => array($post->ID),
+'posts_per_page'=>3, // Number of related posts that will be shown.
+'ignore_sticky_posts'=>1
+);
+$my_query = new wp_query( $args );
+if( $my_query->have_posts() ) {
+echo '
+<div class="relatedcontent">';
+while( $my_query->have_posts() ) {
+$my_query->the_post();?>
+
+        <div class="related-item img-hover-zoom-trending img-hover-zoom--brightness"> <a href="<?php the_permalink($id); ?>">
+         <div class="related-image img-hover-zoom img-hover-zoom--brightness">
+               <?php the_post_thumbnail(); ?></div>
+             
+<div class="related-data" >
+    <div class="related-title"><?php the_title(); ?></div>
+	<div class="related-cat">
+        <h5><?php the_category(', '); ?></h5></div></div></a></div>
+<?
+}
+
+}
+}
+$post = $orig_post;
+wp_reset_query(); ?>
+        
+        
 </div>
+
+
+    
+    
+    
+
 
 <?php get_footer(); ?>

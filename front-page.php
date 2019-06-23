@@ -30,17 +30,17 @@
                         
                           
                       <div class="col spanright">
-                        <div data-aos="fade-up" data-aos-duration="1200" >
+                        <div data-aos="fade-up" data-aos-duration="1200">
                             <?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
                             $image_large_src = wp_get_attachment_image_src( $attachment_id, 'large' );
                             ?>
-                <img src="<?php echo $image_large_src[0]; ?>"
+                <a href="<?php the_permalink($id); ?>"><img src="<?php echo $image_large_src[0]; ?>"
                   srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
                   sizes="(min-width: 1200px) 638px, (min-width: 992px) 438px, (min-width: 760px) calc(50vw - 5vw),  (min-width: 320px) calc(90vw - 10vw)"
                   alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
-                         </div></div>
+                    </div></div>
                      
                         <div class="col spanleft">
                          <div data-aos="fade-right" data-aos-duration="1200">
@@ -61,8 +61,9 @@
                             </div>
                         </div>
                    
-                
-                        <div class="widget-container">
+                <div class="widgetarea">
+        <div class="widget-container-up"><img src="<?php bloginfo ('template_url') ?>/images/wavesup.svg"  alt="wave" style="width: 100vw; ">
+                         </div>
         <div class="widgetfront">
             <h1 class="title-big">Welkom</h1>
             <div class="title-under">op mijn blog</div>
@@ -92,7 +93,12 @@
      .start();
  </script>
             
-            <?php dynamic_sidebar('sidebar'); ?></div></div>
+            <?php dynamic_sidebar('sidebar'); ?></div>
+    
+        <div class="widget-container-down"><img src="<?php bloginfo ('template_url') ?>/images/wavesdown.svg"  alt="wave" style="width: 100vw; ;">
+            </div>
+        
+    </div>
     
 		                  
 
@@ -103,7 +109,7 @@
                             
                             <div class="box boximage">
                              <div data-aos="fade-right" data-aos-duration="1200">
-                               <?php 
+                               <a href="<?php the_permalink($id); ?>"><?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
 	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
@@ -119,7 +125,7 @@
                         </div>
         
         <div class="box boxtext">
-                        
+                        <a href="<?php the_permalink($id); ?>">
                             <h1 class="posttitle2" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
                         
                         <div class="categorie2" ><?php the_category(', '); ?></div>
@@ -139,7 +145,8 @@
                 <div class="boxes-middle">
                     
                         <div class="box boximage-middle">
-                        <div data-aos="fade-up" data-aos-duration="1200">   <?php 
+                        <div data-aos="fade-up" data-aos-duration="1200">
+                            <a href="<?php the_permalink($id); ?>"><?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
 	   $image_large_src = wp_get_attachment_image_src( $attachment_id, 'small' );
@@ -150,7 +157,7 @@
                   alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
                             </div></div>
                     
-                <div class="box boxtext-middle">
+                <div class="box boxtext-middle"><a href="<?php the_permalink($id); ?>">
                             <h1 class="posttitle3" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
                       
                       <div class="categorie3" ><?php the_category(', '); ?></div>
@@ -167,7 +174,7 @@
                 
                <div class="boxes">
                            
-                    <div class="box boximage">
+                    <div class="box boximage"><a href="<?php the_permalink($id); ?>">
                         <div data-aos="fade-right" data-aos-duration="1200">
                                <?php 
 	                   // Get this attachment ID
@@ -194,7 +201,7 @@
           
                    </div>
         
-        <div class="box boxtext">
+        <div class="box boxtext"><a href="<?php the_permalink($id); ?>">
                             <h1 class="posttitle4" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
                        
                        <div class="categorie4" ><?php the_category(', '); ?></div>                          
@@ -203,7 +210,7 @@
         
         </div>
     
-    <div class="arrow"><img src="<?php bloginfo ('template_url') ?>/images/frontarrow1.svg"  alt="arrow" style="width: 120px; padding-right: 25px; "></div>
+    <div class="arrow"><img src="<?php bloginfo ('template_url') ?>/images/frontarrow1.svg"  alt="arrow" style="width: 80px; padding-right: 25px; "></div>
     
    <div class="moreblogs"> 
     
