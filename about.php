@@ -1,3 +1,5 @@
+
+
 <?php
 /* Template Name: Fixed page */
 
@@ -26,7 +28,10 @@ get_header();
                 </div>
     </div>
     
-    
+
+</div>    
+
+
 </div>
 
 <?php get_footer(); ?>

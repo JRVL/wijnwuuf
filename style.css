@@ -545,11 +545,17 @@ height: 1em !important;
 
  menu */
 
+form {
+    
+}
+
 input { 
+    margin-top: 30px;
     height: 40px;
-    width: 160px;
-    border: 1px;
-    background: #f3f3f3;
+    width: 460px;
+    border: 0px;
+    border-bottom: solid 1px #c4c4c4;
+    background: #fff;
     outline: none !important;
     padding: 0px 15px;
     font-family: 'Roboto', sans-serif;
@@ -583,7 +589,7 @@ display: none;
     top: 100%;
     margin-top: 1px;
     z-index: 9999;
-    background: #f3f3f3;
+    background: #567B69;
     padding: 10px;
     
 }
@@ -614,7 +620,7 @@ display: none;
     content: "";
     display: block;
     position: absolute;
-    right: 22px;
+    right: 62px;
     top: -20px;
     z-index: 10;
 }
@@ -1252,7 +1258,7 @@ margin-bottom: 50px;
 .img-hover-zoom-trending img {
   position: absolute;
   float: left;
-  width: 200px;
+  width: 250px;
   height: 140px;
   overflow: hidden;
   z-index: 100;/* Removing this will break the effects */
@@ -1269,6 +1275,7 @@ margin-bottom: 50px;
 
 p.widget-text {
     position: absolute;
+    width: 200px;
     width: 200px;
     padding-left: 25px;
     padding-right: 25px;
@@ -1339,6 +1346,7 @@ position: absolute;
   transition: transform 2s, filter 0.7s ease-in-out;
   transform-origin: center center;
   filter: brightness(50%);
+    width: 250px;
 }
 
 /* The Transformation */
@@ -1362,11 +1370,77 @@ position: absolute;
     margin-right: 1em;
 }
 
-/**
-* Front-Page/Home Template
-*/
+/* Searchpage */
+
+.searchhead {
+    text-align: center;
+    
+}
+
+.title-big-search {
+    display: inline-block;
+    font-size: 95px;
+    margin-top: 0px;
+    color: rgba(86,123,105,0.2);
+}
+
+.title-under-search {
+    position: relative;
+    font-family: 'Conv_03-streetlight-demo-version';
+    font-weight: 300;
+    font-size: 45px;
+    margin-left: 205px;
+    margin-top: -73px;
+    color: rgba(0,0,0,0.7);
+}
 
 
+.searchhome {
+    max-width: 73%;
+    margin: 0 auto;
+
+}
+
+.searcharticle {
+    height: auto;
+    margin-bottom: 100px;
+}
+
+.searchitem {
+    width: 250px;
+    height: 470px;
+    margin-bottom: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    float: left;
+    background: #fff;
+    box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
+}
+
+.searchthumb {
+    width: 250px;
+    height: 180px;
+    float: left;
+    padding-left: -12px;
+    margin-bottom: 15px;
+}
+
+.searchcontent {
+    padding: 28px 22px;
+}
+
+.posttitle-search {
+    font-size: 1.3125rem;
+}
+
+.categorie-search {
+    font-size: 0.812rem;
+}
+
+.content-search p {
+    max-height: 40px;
+    font-size: 0.912rem;
+}
 
 
 /*  BOXESTOP  */
@@ -2071,7 +2145,8 @@ CSS
 }
 
  .column1, .column2, .column3 {
-        width: 100%;
+        min-width: 100%;
+     
     }
     .logowit {
         margin-left: -85px;

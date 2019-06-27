@@ -89,6 +89,8 @@ if( $args->theme_location == 'primary' )
        return $items;
 }
 
+
+
 /* --- Add Stylesheets --- */
 
 // Enqueue Main Stylesheet
@@ -220,6 +222,13 @@ the_post_thumbnail( 'medium_large' ); // Medium-large resolution (default 768px 
 the_post_thumbnail( 'large' ); // Large resolution (default 1024px x 1024px max)
 the_post_thumbnail( 'full' ); // Original image resolution (unmodified)
 the_post_thumbnail( array( 100, 100 ) ); // Other resolutions (height, width)
+set_post_thumbnail_size( 'searchimg' ,200, 140, array( 'center', 'center')  ); // 50 pixels wide by 50 pixels tall, crop from the center
+
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 
 ?>
