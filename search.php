@@ -18,7 +18,7 @@ Template Name: Search
     <?php
 $s=get_search_query();
 $args = array(
-    'posts_per_page' => 100,
+    'posts_per_page' => 20,
                 's' =>$s
             );
     // The Query
@@ -30,19 +30,18 @@ if ( $the_query->have_posts() ) {
     ?> 
     
     <div class="searchitem"><a href="<?php the_permalink($id); ?>">
-    <div class="searchthumb img-hover-zoom img-hover-zoom--brightness"> <a href="<?php the_permalink($id); ?>">
-         <div class="searchthumb img-hover-zoom img-hover-zoom--brightness">
-               <?php the_post_thumbnail(); ?></div>
+    <div class="searchthumb img-hover-zoom-search"> <a href="<?php the_permalink($id); ?>">
+               <?php the_post_thumbnail(); ?>
         
         
-                    <div class="searchcontent">
+                    <div class="searchcontent"><a href="<?php the_permalink($id); ?>">
                     <h1 class="posttitle-search" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php echo wp_trim_excerpt( get_the_title() ); ?></h1>
                         
                         <div class="categorie-search" ><?php the_category(', '); ?></div>
                             
-        <h4 class="content-search" ><?php the_excerpt(); ?></h4>
+        <h4 class="content-search" ><a href="<?php the_permalink($id); ?>"><?php the_excerpt(); ?></h4>
                             
-        </div>  </a></div> </a></div>
+            </a></div> </a></a></div></div>
                     
                  <?php
         }

@@ -38,7 +38,7 @@
                             ?>
                 <a href="<?php the_permalink($id); ?>"><img src="<?php echo $image_large_src[0]; ?>"
                   srcset="<?php echo wp_get_attachment_image_srcset( $attachment_id, 'non-cropped-extra-large' ); ?>"
-                  sizes="(min-width: 1200px) 638px, (min-width: 992px) 438px, (min-width: 760px) calc(50vw - 5vw),  (min-width: 320px) calc(90vw - 10vw)"
+                  sizes="(min-width: 1200px) 628px, (min-width: 992px) 438px, (min-width: 760px) calc(50vw - 5vw),  (min-width: 320px) calc(90vw - 10vw)"
                   alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
                     </div></div>
                      
@@ -130,7 +130,7 @@
                         
                         <div class="categorie2" ><?php the_category(', '); ?></div>
                             
-                            <h4 class="content2" ><?php the_content(''); ?></h4>
+                            <h4 class="content2" ><a href="<?php the_permalink($id); ?>"><?php the_content(''); ?></h4>
                             
                             <a id="readmorebutton1" class="readmore1" href="<?php the_permalink($id); ?>">Lees meer</a></div>
         
@@ -144,8 +144,20 @@
             
                 <div class="boxes-middle">
                     
-                        <div class="box boximage-middle">
-                        <div data-aos="fade-up" data-aos-duration="1200">
+                        
+                <div class="box boxtext-middle"><a href="<?php the_permalink($id); ?>">
+                            <h1 class="posttitle3" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
+                      
+                      <div class="categorie3" ><?php the_category(', '); ?></div>
+                            
+                            <h4 class="content3"><a href="<?php the_permalink($id); ?>"><?php the_content(''); ?></h4>
+                               
+                            
+                            
+                            <a id="readmorebutton1" class="readmore3" href="<?php the_permalink($id); ?>">Lees meer</a></div>
+                    
+                    <div class="box boximage-middle">
+                        <div data-aos="fade-left" data-aos-duration="1200">
                             <a href="<?php the_permalink($id); ?>"><?php 
 	                   // Get this attachment ID
 	                       $attachment_id = get_post_thumbnail_id( $post->ID );
@@ -156,17 +168,6 @@
                   sizes="(min-width: 840px) 450px, (min-width: 720px) calc(50vw),  (min-width: 320px) calc(90vw - 10vw)"
                   alt="<?php get_post_meta( $attachment_id, 'wijnwuuf_wp_attachment_image_alt', true) ?>">
                             </div></div>
-                    
-                <div class="box boxtext-middle"><a href="<?php the_permalink($id); ?>">
-                            <h1 class="posttitle3" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
-                      
-                      <div class="categorie3" ><?php the_category(', '); ?></div>
-                            
-                            <h4 class="content3"><?php the_content(''); ?></h4>
-                               
-                            
-                            
-                            <a id="readmorebutton1" class="readmore3" href="<?php the_permalink($id); ?>">Lees meer</a></div>
                    
     </div>
                     
@@ -205,7 +206,7 @@
                             <h1 class="posttitle4" href="<?php the_permalink($id); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></h1>
                        
                        <div class="categorie4" ><?php the_category(', '); ?></div>                          
-                       <h4 class="content4" ><?php the_content(''); ?></h4>
+                       <h4 class="content4" ><a href="<?php the_permalink($id); ?>"><?php the_content(''); ?></h4>
                             <a id="readmorebutton1" class="readmore4" href="<?php the_permalink($id); ?>">Lees meer</a></div>
         
         </div>

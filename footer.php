@@ -29,8 +29,8 @@
         <h2 class="footer-text">
             <p class="footer-text"><br>Amber Lukaart<br>
             <a class="footer-text" style="color:#000" href="mailto:info@wijnwuuf.nl">info@wijnwuuf.nl</a><br><br>
-                <i style="margin-right: 10px;"  class="icon fab fa-instagram"></i>
-                <i class="icon fab fa-facebook"></i></p>
+                <i style="margin-right: 10px; margin-top: -15px; font-size: 40px;"  class="icon fa fa-instagram"></i>
+                <i style="margin-right: 10px; margin-top: -15px; font-size: 35px;" class="icon fa fa-facebook"></i></p>
         </h2></div>
         
     </div></div>

@@ -85,9 +85,17 @@ add_filter('wp_nav_menu_items', 'add_search_form', 10, 2);
 // Display search icon in menus and toggle search form 
 function add_search_form($items, $args) {
 if( $args->theme_location == 'primary' )
-       $items .= '<li class="search"><a class="search_icon"><i class="fas fa-search searchbar"></i></span></a><div style="display:none;" class="spicewpsearchform">'. get_search_form(false) .'</div></li>';
+       $items .= '<li class="search"><a class="search_icon" href=""><i class="fa fa-search searchbar"></i></span></a></li>';
        return $items;
 }
+
+function wpb_change_search_url() {
+    if ( is_search() && ! empty( $_GET['s'] ) ) {
+        wp_redirect( home_url( "/search/" ) . urlencode( get_query_var( 's' ) ) );
+        exit();
+    }   
+}
+add_action( 'template_redirect', 'wpb_change_search_url' );
 
 
 
@@ -225,11 +233,11 @@ the_post_thumbnail( array( 100, 100 ) ); // Other resolutions (height, width)
 set_post_thumbnail_size( 'searchimg' ,200, 140, array( 'center', 'center')  ); // 50 pixels wide by 50 pixels tall, crop from the center
 
 
-function wpdocs_custom_excerpt_length( $length ) {
-    return 30;
+/* function wpdocs_custom_excerpt_length( $length ) {
+    return 43;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
-
+*/
 
 ?>
 

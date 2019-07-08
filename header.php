@@ -64,89 +64,33 @@ j$(function(){
 });
        });
     </script>
-    <script>/*
-        jQuery( document ).ready(function() {
-   
-
-        var fadeStart=15 // 100px scroll or less will equiv to 1 opacity
-    ,fadeUntil=100 // 200px scroll or more will equiv to 0 opacity
-    ,fading = $('.logo');
-
-jQuery(window).bind('scroll', function(){
-    var offset = $(document).scrollTop()
-        ,opacity=0
-    ;
-    if( offset<=fadeStart ){
-        opacity=1;
-    }else if( offset<=fadeUntil ){
-        opacity=1-offset/fadeUntil;
-    }
-    fading.css('opacity',opacity).html(opacity);
-});
-     });   
-//    $(document).ready(function(){
-//  var lastScrollTop = 0;
-//    $(document).scroll(function(event){
-//       var st = $(this).scrollTop();
-//       $('head>style').last().remove();
-//       if (st > lastScrollTop){
-//        
-//            $('.logo').css({
-//                sizeof: function() {
-//                var sizeof = ((1 - (400 - st) / 400) * 1.8);
-//                return opacity;
-//            }, left: st
-//        
-//           });
-//       } else {
-//          $('.logo').css({
-//                opacity: function() {
-//                var opacity = ((1 - (400 - st) / 400) * 1.8);
-//                return opacity;
-//            }, left: st
-//        
-//           });
-//       }
-//       lastScrollTop = st;
-//    });
-//});
-</script>
-    
-    
     
     
 <script>
 
 
 $(window).scroll(function(){
-    if ($(this).scrollTop() > 22) {
+    if ($(this).scrollTop() > 30) {
        $('.header').addClass('smaller');
-       
+        $('.header').addClass('.navifixed');
+        $('.home').css("margin-top", 150);
+        $('.single-main').css("margin-top", 150);
+        $('.about-main').css("margin-top", 150);
+        
     } else {
        $('.header').removeClass('smaller');
         $('.header').removeClass('.navifixed');
+    $('.home').css("margin-top", 90);
+        $('.single-main').css("margin-top", 90);
+        $('.about-main').css("margin-top", 90);
     }
 });
 
 
-       
-  
-jQuery(document).ready(function($) {
-  $(".search_icon").click(function() {
-    $(".spicewpsearchform").toggle();
-  });
-
-  $(document).keydown(function(e) {
-    if (e.keyCode == 27) {
-      //$(modal_or_menu_element).closeElement();
-      $(".spicewpsearchform").hide();
-    }
-  });
-});
-       
-    </script>
+      
+ 
     
-    <script>
+  
 //TOGGLE FONT AWESOME ON CLICK
 $('.search_icon').click(function(){
     $(this).find('i').toggleClass('fa ')
@@ -160,17 +104,18 @@ $('.search_icon').blur(function(){
 
    
     
-
-   
-    
     <meta charset="UTF-8">
     <link href="<?php bloginfo('template_url') ?>/style.css" type="text/css" rel=stylesheet>
     <?php wp_head(); ?>
     
-    <header class="header">
+    <div class="top-container">
+  
+</div>
+    
+    <header class="header" id="myHeader">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php bloginfo ('template_url') ?>/images/logo.svg" alt="" class="logo"></a>
-        <input class="menu-btn" type="checkbox" id="menu-btn">
-        <label class="menu-icon" for="menu-btn"><span class="navicon"></span>
+        <input class="menu-btn" type="checkbox" id="menu-btn" href="/search.php">
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span> 
             
             <?php 
                     wp_nav_menu( $arg = array (
@@ -182,11 +127,11 @@ $('.search_icon').blur(function(){
                         'link_after' => '</span>',
                         'walker' => new CSS_Menu_Walker()
 
-                       
+                     
                         
                     ));
             ?> 
-            <span id="slide-line"></span> </label>    
+            <span id="slide-line" ></span> </label>    
      
         
     </header>
