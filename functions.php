@@ -239,5 +239,11 @@ set_post_thumbnail_size( 'searchimg' ,200, 140, array( 'center', 'center')  ); /
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 */
 
+// This theme uses wp_nav_menu() in two locations.  
+register_nav_menus( array(  
+  'primary' => __( 'Primary Navigation', 'wijnwuuf' ),  
+  'secondary' => __('Secondary Navigation', 'wijnwuuf')  
+) );
+
 ?>
 

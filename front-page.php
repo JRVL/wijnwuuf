@@ -48,7 +48,7 @@
                         
                                     <div class="categorie1"><?php the_category(', '); ?></div>
                             
-                                    <h4 class="content1" ><?php the_content(''); ?></h4>
+                                    <h4 class="content1" ><a href="<?php the_permalink($id); ?>"><?php the_content(''); ?></h4>
                             
                                     <div class="button-wrap">
                                     <a id="readmorebutton" class="readmore" href="<?php the_permalink($id); ?>">Lees meer</a></div>
@@ -63,7 +63,7 @@
                    
                 <div class="widgetarea">
         <div class="widget-container-up"><img src="<?php bloginfo ('template_url') ?>/images/wavesup.svg"  alt="wave" style="width: 100vw; ">
-                         </div>
+                         
         <div class="widgetfront">
             <h1 class="title-big">Welkom</h1>
             <div class="title-under">op mijn blog</div>
@@ -92,13 +92,13 @@
      .pauseFor(500)
      .start();
  </script>
-            
-            <?php dynamic_sidebar('sidebar'); ?></div>
+            <div class="sidebar">
+                <?php dynamic_sidebar('sidebar'); ?></div></div>
     
         <div class="widget-container-down"><img src="<?php bloginfo ('template_url') ?>/images/wavesdown.svg"  alt="wave" style="width: 100vw; ;">
-            </div>
+            
         
-    </div>
+            </div></div></div>
     
 		                  
 

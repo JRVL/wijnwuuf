@@ -758,8 +758,12 @@ display: none;
 
 .single-content {
     padding-top: 8px;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
     
+}
+
+.single-content a:link {
+    color: #567B69;
 }
 
 .single-content img {
@@ -767,6 +771,31 @@ display: none;
     max-width: 100%;
     height: auto;
 
+    
+}
+
+.tags {
+    float: left;
+    margin-top: 10px;
+    word-break: break-all;
+    margin-bottom: 5px;
+}
+
+.single-content .tags a {
+    font-size: 10px !important;
+    text-transform: uppercase;
+    margin-bottom: 3px !important;
+    max-height: 30px;
+    line-height: 31px;
+    display: inline-block; 
+    padding: 0 10px;
+    font-weight: 500;
+    background: #c4c4c4;
+    color: #fff !important;
+}
+
+.single-content .tags a:hover {
+    background: #567B69;
     
 }
 
@@ -803,6 +832,11 @@ display: none;
         box-shadow: 0 20px 23px -15px rgba(0,0,0,.15);
         
     }
+
+.related-item .img-hover-zoom-trending .img-hover-zoom--brightness img {
+    width: 200px;
+    height: 140px;
+}
 
 .related-cat {
         position: absolute;
@@ -1261,8 +1295,8 @@ margin-bottom: 50px;
 .img-hover-zoom-trending img {
   position: absolute;
   float: left;
-  width: 250px;
-  height: 167px;
+  width: 200px;
+  height: 140px;
   overflow: hidden;
   z-index: 100;/* Removing this will break the effects */
 }
@@ -1358,7 +1392,7 @@ position: absolute;
   transition: transform 2s, filter 0.7s ease-in-out;
   transform-origin: center center;
   filter: brightness(50%);
-    width: 250px;
+  
 }
 
 /* The Transformation */
@@ -1920,6 +1954,48 @@ a:link { color: #c4c4c4; }
     
 }
 
+
+
+.row-single {
+    width: 56%;
+    height: 400px;
+    margin: 0 auto;
+    
+}
+
+/* Create two equal columns that floats next to each other */
+.column-single {
+  float: left;
+  width: 47%;
+  padding: 10px;
+}
+
+.bottomMenu li { list-style-type: none; }
+.bottomMenu li a:hover {
+   color: #000;
+}
+
+.vorigpost {
+    transition: all 0.3s ease 0s;
+    background: #567B69;
+    color: #fff;
+    height: auto;
+    padding: 15px;
+    margin: 10px;
+}
+
+.vorigpost a {
+    color: #fff;
+}
+
+.vorigpost a:hover {
+    color: #fff;
+}
+
+.vorigpost:hover {
+    opacity: 0.8;
+}
+
 button{
   margin: 0;
   padding: 0;
@@ -2423,8 +2499,9 @@ CSS
 .boximage {
         padding: 10px;
     }
+    
 .widgetarea {
-        height: 700px;
+        height: 750px;
     }
     
     
@@ -2520,6 +2597,12 @@ CSS
     margin: 0 auto;
     
 }
+    
+
+    
+.widgetarea {
+        height: 745px;
+    }
 
    }
 
@@ -2575,7 +2658,9 @@ CSS
 
 } 
 
-
+    .widgetarea {
+        height: 760px;
+    }
     
     
 
@@ -2599,6 +2684,8 @@ CSS
     .toggle-nav {
         display: none;
     }
+    
+
     
     
 }

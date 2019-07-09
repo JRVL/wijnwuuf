@@ -42,7 +42,9 @@ get_header();
                             endwhile;
                         endif;
                     
-                    ?></div>
+                    ?>
+                        <div class="tags"><?php the_tags('',' ',''); ?></div>
+                    </div>
                    
 <script>
   AOS.init();
@@ -52,7 +54,7 @@ get_header();
                 </main>
     </div>
     
-    <div class="widget-container-down"><img src="<?php bloginfo ('template_url') ?>/images/wavesdown.svg"  alt="wave" style="width: 100vw; ;"></div>
+    
     <div class="related">
         <h1 class="title-big-trending">Misschien</h1>
         <div class="title-under-trending">vind je dit ook leuk?</div></div>
@@ -94,8 +96,17 @@ wp_reset_query(); ?>
         
 </div>
 
-
-    
+<div class="row-single">
+  <div class="column-single" style="background-color:#aaa;">
+    <div class="bottomMenu">
+              <?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>  
+    </div>
+  </div>
+  <div class="column-single">
+      <div class="vorigpost"><?php previous_post_link( '<span>Lees mijn vorige blog:</span>%link', '<br>%title' ); ?></div>
+      <div class="vorigpost"><?php next_post_link('<span><u>Lees mijn volgende blog:</u></span>%link', '<br>%title'); ?></div>
+  </div>
+</div>
     
     
 
